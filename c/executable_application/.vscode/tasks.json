@@ -1,0 +1,63 @@
+{
+    "version": "0.1.0",
+    "suppressTaskName": true,
+    "command": "make",
+    "args": [
+    	"TARGET=${workspaceRoot}./bin/Hello World"
+    ],
+    "tasks": [
+        {
+            "taskName": "build debug",
+            "args": [ "debug" ]
+        },
+        {
+            "taskName": "build debug (x86)",
+            "args": [ "TARGETARCH=x86", "debug" ]
+        },
+        {
+            "taskName": "build debug (x86_64)",
+            "args": [ "TARGETARCH=x86_64", "debug" ]
+        },
+        {
+            "taskName": "build release",
+            "args": [ "release" ]
+        },
+        {
+            "taskName": "build release (x86)",
+            "args": [ "TARGETARCH=x86", "release" ]
+        },
+        
+        {
+            "taskName": "build release (x86_64)",
+            "args": [ "TARGETARCH=x86_64", "release" ]
+        },
+        {
+            "taskName": "clean",
+            "args": [ "clean" ]
+        }
+    ],
+    "linux": {
+        "tasks": [
+            {
+                "taskName": "build release (arm)",
+                "args": [ "TARGETOS=linux", "TARGETARCH=arm", "release" ]
+            },
+            {
+                "taskName": "build debug (arm)",
+                "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build" ]
+            }
+        ]
+    },
+    "osx": {
+        "tasks": [
+            {
+                "taskName": "build release (arm)",
+                "args": [ "TARGETOS=osx", "TARGETARCH=arm", "release" ]
+            },
+            {
+                "taskName": "build debug (arm)",
+                "args": [ "TARGETOS=osx", "TARGETARCH=arm", "debug" ]
+            }
+        ]
+    }
+}
