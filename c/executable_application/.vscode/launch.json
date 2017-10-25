@@ -1,0 +1,21 @@
+{
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/bin/debug/Main",
+                "cwd": "${workspaceRoot}/bin",
+                "MIMode": "gdb"
+            },
+            {
+                "name": "(gdb) Attach",
+                "type": "cppdbg",
+                "request": "attach",
+                "program": "${workspaceRoot}/bin/debug/Main",
+                "processId": "${command:pickProcess}",
+                "MIMode": "gdb"
+            }
+        ]
+    }

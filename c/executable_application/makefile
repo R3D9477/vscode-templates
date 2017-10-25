@@ -1,6 +1,16 @@
+SRCDIR ?= src
+INCDIR ?= include
+
+DBGBINDIR ?= bin/debug
+DBGOBJDIR ?= obj/debug
+RELBINDIR ?= bin/release
+RELOBJDIR ?= obj/release
+
 ifeq ($(OS),Windows_NT)
-	TARGET ?= ./bin/Main.exe
+	APPNAME ?= Main.exe
+
 	RM = del
+	MKDIR = mkdir -p
     
     TARGETOS ?= windows
     
@@ -15,8 +25,10 @@ ifeq ($(OS),Windows_NT)
         endif
     endif
 else
-	TARGET ?= ./bin/Main
+	APPNAME ?= Main
+
 	RM = rm -f
+	MKDIR = mkdir -p
     
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
@@ -38,13 +50,9 @@ else
     endif
 endif
 
-INCDIR ?= include
-SRCDIR ?= src
-OBJDIR ?= obj
-
 CC ?= gcc
 
-CLFLAGS ?= -I$(INCDIR)
+CLFLAGS ?= -I$(ESCINCDIR)
 CCFLAGS ?= -Wall
 
 ifeq ($(TARGETOS),windows)
@@ -70,23 +78,58 @@ endif
 LDFLAGS ?= -Llib
 LDLIBS  ?= -lm
 
-$(info Target is "$(TARGET)")
-
 empty =
 space = $(empty) $(empty)
 escspace = $(empty)\ $(empty)
-ESCTARGET = $(subst $(space),$(escspace),$(TARGET))
+ESCSRCDIR = $(subst $(space),$(escspace),$(SRCDIR))
+ESCINCDIR = $(subst $(space),$(escspace),$(INCDIR))
+ESCAPPNAME = $(subst $(space),$(escspace),$(APPNAME))
+ESCDBGBINDIR = $(subst $(space),$(escspace),$(DBGBINDIR))
+ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
+ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
+ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
 
-SRCS = $(wildcard $(SRCDIR)/*.c)
-OBJS = $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+SRCS = $(wildcard $(ESCSRCDIR)/*.c)
 
-debug: $(ESCTARGET)
+DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
+DBGOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGCFLAGS = -g3 -DDEBUG
+RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
+RELOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELCFLAGS = -O3 -DNDEBUG
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CLFLAGS) $(CCFLAGS) -c $< -o "$@"
+.PHONY: clean build_debug rebuild_debug build_release rebuild_release
 
-$(ESCTARGET): $(OBJS)
-	$(CC) $(LDFLAGS) $^ $(LDLIBS) -o "$@"
+build_debug: prep debug
+build_release: prep release
+
+debug: $(DBGTARGET)
+
+$(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
+
+$(DBGTARGET): $(DBGOBJS)
+	$(CC) $(LDFLAGS) $(DBGCFLAGS) $^ $(LDLIBS) -o "$@"
+
+release: $(RELTARGET)
+
+$(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
+
+$(RELTARGET): $(RELOBJS)
+	$(CC) $(LDFLAGS) $(RELCFLAGS) $^ $(LDLIBS) -o "$@"
+
+prep:
+	$(MKDIR) $(DBGBINDIR)
+	$(MKDIR) $(DBGOBJDIR)
+	$(MKDIR) $(RELBINDIR)
+	$(MKDIR) $(RELOBJDIR)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(DBGTARGET)
+	$(RM) $(DBGOBJS)
+	$(RM) $(RELTARGET)
+	$(RM) $(RELOBJS)
+
+rebuild_debug: clean build_debug
+rebuild_release: clean build_release
