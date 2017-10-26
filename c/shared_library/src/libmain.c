@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <extfunc.h>
+#include <extlibfunc.h>
 
-int main (void) {
+int mainlibfunc (void) {
   
-  extfunc();
-  
+  extlibfunc();
+
   printf("Press any key to exit...");
   getchar();
 

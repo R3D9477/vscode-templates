@@ -7,7 +7,7 @@ RELBINDIR ?= bin/release
 RELOBJDIR ?= obj/release
 
 ifeq ($(OS),Windows_NT)
-	APPNAME ?= main.exe
+	APPNAME ?= libmain.dll
 
 	RM = del
 	MKDIR = mkdir -p
@@ -25,7 +25,7 @@ ifeq ($(OS),Windows_NT)
         endif
     endif
 else
-	APPNAME ?= main
+	APPNAME ?= libmain.so
 
 	RM = rm -f
 	MKDIR = mkdir -p
@@ -53,7 +53,7 @@ endif
 CC ?= gcc
 
 CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall
+CCFLAGS ?= -Wall -Werror -fpic
 
 ifeq ($(TARGETOS),windows)
 	CCFLAGS += -D WIN32
@@ -75,7 +75,7 @@ ifeq ($(TARGETARCH),arm)
 	CCFLAGS += -D ARM
 endif
 
-LDFLAGS ?= -Llib
+LDFLAGS ?= -shared -Llib
 LDLIBS  ?= -lm
 
 empty =
