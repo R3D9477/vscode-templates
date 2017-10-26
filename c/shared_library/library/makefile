@@ -1,3 +1,5 @@
+APPNAME ?= main
+
 SRCDIR ?= src
 INCDIR ?= include
 
@@ -7,12 +9,11 @@ RELBINDIR ?= bin/release
 RELOBJDIR ?= obj/release
 
 ifeq ($(OS),Windows_NT)
-	APPNAME ?= libmain.dll
+	TARGETOS ?= windows
+	APPNAME += .dll
 
 	RM = del
 	MKDIR = mkdir -p
-    
-    TARGETOS ?= windows
     
     ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
     	TARGETARCH ?= x86_64
@@ -25,17 +26,13 @@ ifeq ($(OS),Windows_NT)
         endif
     endif
 else
-	APPNAME ?= libmain.so
-
 	RM = rm -f
 	MKDIR = mkdir -p
     
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
     	TARGETOS ?= linux
-    endif
-    ifeq ($(UNAME_S),Darwin)
-    	TARGETOS ?= osx
+    	APPNAME += .so
     endif
     
     UNAME_P := $(shell uname -p)
@@ -53,16 +50,13 @@ endif
 CC ?= gcc
 
 CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall -Werror -fpic
+CCFLAGS ?= -Wall -Werror -fPIC
 
 ifeq ($(TARGETOS),windows)
 	CCFLAGS += -D WIN32
 endif
 ifeq ($(TARGETOS),linux)
 	CCFLAGS += -D LINUX
-endif
-ifeq ($(TARGETOS),osx)
-	CCFLAGS += -D OSX
 endif
 
 ifeq ($(TARGETARCH),x86_64)

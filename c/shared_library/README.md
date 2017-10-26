@@ -1,3 +1,3 @@
 # vscode-templates: c
 
-## shared library
+## shared library with test

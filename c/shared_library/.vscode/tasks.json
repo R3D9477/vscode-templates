@@ -2,10 +2,9 @@
     "version": "0.1.0",
     "suppressTaskName": true,
     "command": "make",
-    "linux": { "args": [ "APPNAME=libmain.so" ] },
-    "windows": { "args": [ "APPNAME=libmain.dll" ] },
     "args": [
-        "DBGBINDIR=${workspaceRoot}/bin/debug",
+    	"APPNAME=main",
+    	"DBGBINDIR=${workspaceRoot}/bin/debug",
         "DBGOBJDIR=${workspaceRoot}/obj/debug",
         "RELBINDIR=${workspaceRoot}/bin/release",
         "RELOBJDIR=${workspaceRoot}/obj/release"
