@@ -3,5 +3,13 @@
 ## executable application
 
 Currently for:
-* Windows: auto detect, x86_64, x86
-* Linux: auto detect, x86_64, x86, arm, arm (cross-compiled)
+* Windows
+  * auto detect (debug, release)
+  * x86_64 (debug, release)
+  * x86 (debug, release)
+* Linux:
+  * auto detect (debug, release)
+  * x86_64 (debug, release)
+  * x86 (debug, release)
+  * arm (debug, release)
+  * arm cross-compiled (release)
