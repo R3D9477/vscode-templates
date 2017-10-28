@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <extfunc.h>
 
-int main (void) {
+int main (void)
+{  
+	extfunc();
   
-  extfunc();
-  
-  printf("\nPress any key to exit...");
-  getchar();
+	printf("\nPress any key to exit...");
+	getchar();
 
-  return (0);
+	return (0);
 }

@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <mainlibfunc.h>
 
-int main (void) {
+int main (void)
+{
+	mainlibfunc();
   
-  mainlibfunc();
-  
-  printf("\nPress any key to exit...");
-  getchar();
+	printf("\nPress any key to exit...");
+	getchar();
 
-  return (0);
+	return (0);
 }
