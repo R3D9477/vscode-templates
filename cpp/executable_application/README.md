@@ -1,4 +1,4 @@
-# vscode-templates: c
+# vscode-templates: c++
 
 ## executable application
 
