@@ -3,6 +3,4 @@
 void extfunc (void) {
   
   printf("External function called!\n");
-  
-  return;
 }
