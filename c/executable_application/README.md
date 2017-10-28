@@ -7,7 +7,7 @@ Currently for:
   * auto detect (debug, release)
   * x86_64 (debug, release)
   * x86 (debug, release)
-* Linux:
+* Linux
   * auto detect (debug, release)
   * x86_64 (debug, release)
   * x86 (debug, release)
