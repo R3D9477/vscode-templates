@@ -1,13 +1,11 @@
-#include <stdio.h>
-#include <mainClass.h>
+#include<stdio.h>
+#include<mainClass.h>
 
-int main (void) {
-  
-  MainClass *mc = new MainClass(123, 321);
-  mc->print();
-  
-  printf("\nPress any key to exit...");
-  getchar();
+int main (void)
+{
+    MainClass mc;
+    mc.setX(123);
+    mc.printX();
 
-  return (0);
+    return 0;
 }

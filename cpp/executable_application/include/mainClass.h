@@ -4,11 +4,11 @@
 class MainClass
 {
 	int gx;
-	int gy;
-
+	
 	public:
-		MainClass (int x,int y);
-		void print ();
+		MainClass ();
+		void setX(int x);
+		void printX ();
 };
 
-#endif // mainClass
+#endif // mainClass_h_

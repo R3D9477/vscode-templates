@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <mainClass.h>
 
-MainClass::MainClass (int x, int y)
+MainClass::MainClass ()
 {
-	gx = x;
-	gy = y;
+	gx = 0;
 }
 
-void MainClass::print ()
+void MainClass::setX (int x)
 {
-	printf("x:%d, y:%d\n", gx, gy);
+	gx = x;
+}
+
+void MainClass::printX ()
+{
+	printf("x:%d", gx);
 }

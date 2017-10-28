@@ -50,7 +50,7 @@ endif
 CC ?= g++
 
 CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall
+CCFLAGS ?= -Wall -c
 
 ifeq ($(TARGETOS),windows)
 	CCFLAGS += -D WIN32
@@ -80,14 +80,14 @@ ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
 ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
 ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
 
-SRCS = $(wildcard $(ESCSRCDIR)/*.c)
+SRCS = $(wildcard $(ESCSRCDIR)/*.cpp)
 
 DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
-DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.cpp=$(ESCDBGOBJDIR)/%.o)
 DBGCFLAGS = -g3 -DDEBUG
 
 RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
-RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.cpp=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
 LDFLAGS ?=
@@ -100,7 +100,7 @@ build_release: prep release
 
 debug: $(DBGTARGET)
 
-$(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.cpp
 	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(DBGTARGET): $(DBGOBJS)
@@ -108,7 +108,7 @@ $(DBGTARGET): $(DBGOBJS)
 
 release: $(RELTARGET)
 
-$(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.cpp
 	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(RELTARGET): $(RELOBJS)
