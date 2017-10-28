@@ -8,7 +8,8 @@
                 "/usr/local/include",
                 "/usr/include",
                 "/usr/include/x86_64-linux-gnu",
-                "${workspaceRoot}/library/include"
+                "${workspaceRoot}/library/include",
+                "${workspaceRoot}/test/include"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -19,7 +20,8 @@
                     "/usr/local/include",
                     "/usr/include",
                     "/usr/include/x86_64-linux-gnu",
-                    "${workspaceRoot}/library/include"
+                    "${workspaceRoot}/library/include",
+                    "${workspaceRoot}/test/include"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""

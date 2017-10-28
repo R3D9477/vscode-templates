@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <extfunc.h>
+#include <mainlibfunc.h>
 
 int main (void) {
   
-  extfunc();
+  mainlibfunc();
   
-  printf("Press any key to exit...");
+  printf("\nPress any key to exit...");
   getchar();
 
   return (0);

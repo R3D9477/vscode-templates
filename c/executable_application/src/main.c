@@ -5,7 +5,7 @@ int main (void) {
   
   extfunc();
   
-  printf("Press any key to exit...");
+  printf("\nPress any key to exit...");
   getchar();
 
   return (0);

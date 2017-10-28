@@ -52,7 +52,7 @@ endif
 CC ?= gcc
 
 CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall
+CCFLAGS ?= -Wall -Werror -fPIC
 
 ifeq ($(TARGETOS),windows)
 	CCFLAGS += -D WIN32
@@ -93,7 +93,7 @@ RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
 RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
-LDFLAGS ?= -Wl,-rpath=. -Wall
+LDFLAGS ?= -Wall
 LDLIBS  ?= -l$(ESCLIBNAME)
 
 .PHONY: clean build_debug rebuild_debug build_release rebuild_release
@@ -103,6 +103,7 @@ build_release: prep release
 
 debug: $(DBGTARGET)
 
+LDFLAGS += -Wl,-rpath=$(DBGBINDIR)
 LDFLAGS += -L$(DBGBINDIR)
 
 $(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
@@ -113,6 +114,7 @@ $(DBGTARGET): $(DBGOBJS)
 
 release: $(RELTARGET)
 
+LDFLAGS += -Wl,-rpath=$(RELBINDIR)
 LDFLAGS += -L$(RELBINDIR)
 
 $(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c

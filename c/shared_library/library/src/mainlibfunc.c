@@ -3,10 +3,9 @@
 
 int mainlibfunc (void) {
   
-  extlibfunc();
+  printf("Main function called!\n");
 
-  printf("Press any key to exit...");
-  getchar();
+  extlibfunc();
 
   return (0);
 }
