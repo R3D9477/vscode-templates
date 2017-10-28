@@ -10,7 +10,7 @@ RELOBJDIR ?= obj/release
 
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
-	APPNAME += .dll
+	APPEXT ?= .dll
 
 	RM = del
 	MKDIR = mkdir -p
@@ -32,7 +32,7 @@ else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
     	TARGETOS ?= linux
-    	APPNAME += .so
+    	APPEXT ?= .so
     endif
     
     UNAME_P := $(shell uname -p)
@@ -69,15 +69,12 @@ ifeq ($(TARGETARCH),arm)
 	CCFLAGS += -D ARM
 endif
 
-LDFLAGS ?= -shared -Llib
-LDLIBS  ?= -lm
-
 empty =
 space = $(empty) $(empty)
 escspace = $(empty)\ $(empty)
 ESCSRCDIR = $(subst $(space),$(escspace),$(SRCDIR))
 ESCINCDIR = $(subst $(space),$(escspace),$(INCDIR))
-ESCAPPNAME = $(subst $(space),$(escspace),$(APPNAME))
+ESCAPPNAME = lib$(subst $(space),$(escspace),$(APPNAME))$(subst $(space),$(escspace),$(APPEXT))
 ESCDBGBINDIR = $(subst $(space),$(escspace),$(DBGBINDIR))
 ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
 ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
@@ -86,11 +83,15 @@ ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
 SRCS = $(wildcard $(ESCSRCDIR)/*.c)
 
 DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
-DBGOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
 DBGCFLAGS = -g3 -DDEBUG
+
 RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
-RELOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
+
+LDFLAGS ?= -shared
+LDLIBS  ?=
 
 .PHONY: clean build_debug rebuild_debug build_release rebuild_release
 

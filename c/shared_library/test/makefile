@@ -10,7 +10,8 @@ RELOBJDIR ?= obj/release
 
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
-	APPNAME += .exe
+	APPEXT ?= .exe
+	LIBEXT ?= .dll
 
 	RM = del
 	MKDIR = mkdir -p
@@ -32,7 +33,8 @@ else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
     	TARGETOS ?= linux
-    	APPNAME +=
+    	APPEXT ?=
+    	LIBEXT ?= .so
     endif
     
     UNAME_P := $(shell uname -p)
@@ -69,15 +71,13 @@ ifeq ($(TARGETARCH),arm)
 	CCFLAGS += -D ARM
 endif
 
-LDFLAGS ?= -Llib
-LDLIBS  ?= -lm
-
 empty =
 space = $(empty) $(empty)
 escspace = $(empty)\ $(empty)
 ESCSRCDIR = $(subst $(space),$(escspace),$(SRCDIR))
 ESCINCDIR = $(subst $(space),$(escspace),$(INCDIR))
-ESCAPPNAME = $(subst $(space),$(escspace),$(APPNAME))
+ESCAPPNAME = $(subst $(space),$(escspace),$(APPNAME))$(subst $(space),$(escspace),$(APPEXT))
+ESCLIBNAME = $(subst $(space),$(escspace),$(APPNAME))
 ESCDBGBINDIR = $(subst $(space),$(escspace),$(DBGBINDIR))
 ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
 ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
@@ -86,11 +86,15 @@ ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
 SRCS = $(wildcard $(ESCSRCDIR)/*.c)
 
 DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
-DBGOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
 DBGCFLAGS = -g3 -DDEBUG
+
 RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
-RELOBJS = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
+
+LDFLAGS ?= -Wl,-rpath=. -Wall
+LDLIBS  ?= -l$(ESCLIBNAME)
 
 .PHONY: clean build_debug rebuild_debug build_release rebuild_release
 
@@ -99,6 +103,8 @@ build_release: prep release
 
 debug: $(DBGTARGET)
 
+LDFLAGS += -L$(DBGBINDIR)
+
 $(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
@@ -106,6 +112,8 @@ $(DBGTARGET): $(DBGOBJS)
 	$(CC) $(LDFLAGS) $(DBGCFLAGS) $^ $(LDLIBS) -o "$@"
 
 release: $(RELTARGET)
+
+LDFLAGS += -L$(RELBINDIR)
 
 $(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
