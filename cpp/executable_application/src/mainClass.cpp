@@ -13,5 +13,5 @@ void MainClass::setX (int x)
 
 void MainClass::printX ()
 {
-	printf("x:%d", gx);
+	printf("x:%d\n", gx);
 }

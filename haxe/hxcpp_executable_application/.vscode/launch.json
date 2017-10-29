@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "OSX/Linux: Build and Debug",
+			"args": [
+				"compilePath=${workspaceRoot}",
+				"compileCommand=haxe build_debug.hxml",
+				"runPath=${workspaceRoot}/Bin",
+				"runCommand=Main-debug",
+				"runInTerminal=true"
+			],
+			"type": "hxcpp",
+			"request": "launch",
+			"program": "",
+			"stopOnEntry": true
+		}
+	]
+}

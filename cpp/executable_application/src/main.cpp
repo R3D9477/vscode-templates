@@ -7,5 +7,8 @@ int main (void)
     mc.setX(123);
     mc.printX();
 
+	printf("\nPress any key to exit...");
+	getchar();
+
     return 0;
 }
