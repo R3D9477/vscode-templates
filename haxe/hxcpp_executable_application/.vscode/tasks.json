@@ -1,0 +1,9 @@
+{
+    "version": "0.1.0",
+    "suppressTaskName": true,
+    "command": "haxe",
+    "tasks": [
+        { "taskName": "build debug", "args": [ "build_debug.hxml" ] },
+        { "taskName": "build release", "args": [ "build_release.hxml" ] }
+    ]
+}
