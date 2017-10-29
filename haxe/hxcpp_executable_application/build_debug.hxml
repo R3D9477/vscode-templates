@@ -1,6 +1,6 @@
 -main Main
 -cp Source
--cpp Bin
+-cpp Bin/Debug
 
 -debug
 -lib hxcpp-debugger
