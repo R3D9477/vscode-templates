@@ -1,6 +1,6 @@
 # vscode-templates: c
 
-## executable application
+## console application
 
 Currently for:
 * Windows
