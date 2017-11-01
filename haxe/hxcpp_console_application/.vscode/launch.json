@@ -6,7 +6,7 @@
 			"args": [
 				"compilePath=${workspaceRoot}",
 				"compileCommand=haxe build_debug.hxml",
-				"runPath=${workspaceRoot}/Bin/Debug",
+				"runPath=${workspaceRoot}/din/debug",
 				"runCommand=Main-debug",
 				"runInTerminal=true"
 			],
