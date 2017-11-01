@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/Desktop/vscode-csharp/dotnet_projects/console_application/console_application.csproj",
+      "projectUniqueName": "/home/user/Dropbox/Projects/r3d9u11/vscode-templates/csharp/console_application/console_application.csproj",
       "projectName": "console_application",
-      "projectPath": "/home/user/Desktop/vscode-csharp/dotnet_projects/console_application/console_application.csproj",
+      "projectPath": "/home/user/Dropbox/Projects/r3d9u11/vscode-templates/csharp/console_application/console_application.csproj",
       "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/Desktop/vscode-csharp/dotnet_projects/console_application/obj/",
+      "outputPath": "/home/user/Dropbox/Projects/r3d9u11/vscode-templates/csharp/console_application/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"

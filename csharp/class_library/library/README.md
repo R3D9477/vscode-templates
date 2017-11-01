@@ -1,3 +1,3 @@
 # vscode-templates: C#
 
-## console application
+## .NET class library

@@ -3,12 +3,12 @@
 
 int main (void)
 {
-    MainClass mc;
-    mc.setX(123);
-    mc.printX();
+	MainClass mc;
+	mc.setX(123);
+	mc.printX();
 
 	printf("\nPress any key to exit...");
 	getchar();
 
-    return 0;
+	return 0;
 }

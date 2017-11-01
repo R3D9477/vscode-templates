@@ -1,1 +1,1 @@
-# vscode-templates: c#
+# vscode-templates: C#

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void extfunc (void) 
+void extfunc (void)
 {
 	printf("External function called!\n");
 }

@@ -14,37 +14,37 @@ ifeq ($(OS),Windows_NT)
 
 	RM = del
 	MKDIR = mkdir -p
-    
-    ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
-    	TARGETARCH ?= x86_64
-    else
-        ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
-        	TARGETARCH ?= x86_64
-        endif
-        ifeq ($(PROCESSOR_ARCHITECTURE),x86)
-        	TARGETARCH ?= x86
-        endif
-    endif
+
+	ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
+		TARGETARCH ?= x86_64
+	else
+		ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
+			TARGETARCH ?= x86_64
+		endif
+		ifeq ($(PROCESSOR_ARCHITECTURE),x86)
+			TARGETARCH ?= x86
+		endif
+	endif
 else
 	RM = rm -f
 	MKDIR = mkdir -p
-    
-    UNAME_S := $(shell uname -s)
-    ifeq ($(UNAME_S),Linux)
-    	TARGETOS ?= linux
-    	APPEXT ?=
-    endif
-    
-    UNAME_P := $(shell uname -p)
-    ifeq ($(UNAME_P),x86_64)
-    	TARGETARCH ?= x86_64
-    endif
-    ifneq ($(filter %86,$(UNAME_P)),)
-    	TARGETARCH ?= x86
-    endif
-    ifneq ($(filter arm%,$(UNAME_P)),)
-    	TARGETARCH ?= arm
-    endif
+
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S),Linux)
+		TARGETOS ?= linux
+		APPEXT ?=
+	endif
+
+	UNAME_P := $(shell uname -p)
+	ifeq ($(UNAME_P),x86_64)
+		TARGETARCH ?= x86_64
+	endif
+	ifneq ($(filter %86,$(UNAME_P)),)
+		TARGETARCH ?= x86
+	endif
+	ifneq ($(filter arm%,$(UNAME_P)),)
+		TARGETARCH ?= arm
+	endif
 endif
 
 CC ?= gcc

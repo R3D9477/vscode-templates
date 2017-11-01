@@ -1,4 +1,4 @@
-# vscode-templates: c++
+# vscode-templates: C++
 
 ## console application
 

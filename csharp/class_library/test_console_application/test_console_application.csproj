@@ -7,4 +7,7 @@
 	<ItemGroup>
 		<Content Include="Program.cs" />
 	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="../library/library.csproj" />
+	</ItemGroup>
 </Project>

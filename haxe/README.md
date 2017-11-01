@@ -1,1 +1,1 @@
-# vscode-templates: haxe
+# vscode-templates: Haxe

@@ -1,3 +1,3 @@
-# vscode-templates: javascript
+# vscode-templates: JavaScript
 
 ## nodejs application with one submodule
