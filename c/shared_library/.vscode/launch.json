@@ -1,23 +1,22 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "linux": { "program": "${workspaceRoot}/bin/debug/main" },
-            "windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },
-            "cwd": "${workspaceRoot}/bin",
-            "MIMode": "gdb"
-        },
-        {
-            "name": "(gdb) Attach",
-            "type": "cppdbg",
-            "request": "attach",
-            "linux": { "program": "${workspaceRoot}/bin/debug/main" },
-            "windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },
-            "processId": "${command:pickProcess}",
-            "MIMode": "gdb"
-        }
-    ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch (gdb)",
+			"type": "cppdbg",
+			"request": "launch",
+			"preLaunchTask": "build debug",
+			"cwd": "${workspaceRoot}/bin/debug",
+			"linux": { "program": "${workspaceRoot}/bin/debug/main" },
+			"windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },
+			"MIMode": "gdb"
+		},
+		{
+			"name": "Attach (gdb)",
+			"type": "cppdbg",
+			"request": "attach",
+			"processId": "${command:pickProcess}",
+			"MIMode": "gdb"
+		}
+	]
 }

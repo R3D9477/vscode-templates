@@ -1,16 +1,18 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"taskName": "build",
-			"command": "dotnet build",
+			"taskName": "build debug",
+			"command": "dotnet build --configuration Debug",
 			"type": "shell",
 			"group": "build",
-			"presentation": {
-				"reveal": "silent"
-			},
+			"problemMatcher": "$msCompile"
+		},
+		{
+			"taskName": "build release",
+			"command": "dotnet build --configuration Release",
+			"type": "shell",
+			"group": "build",
 			"problemMatcher": "$msCompile"
 		}
 	]

@@ -1,14 +1,15 @@
 {
-    "version": "0.1.0",
-    "configurations": [
-        {
-            "name": "Launch index.html (disable sourcemaps)",
-            "type": "chrome",
-            "request": "launch",
-            "sourceMaps": false,
-            "file": "${workspaceRoot}/index.html",
-            "runtimeExecutable": "/usr/bin/chromium-browser",
-            "timeout": 100000
-        }
-    ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug (disable sourcemaps)",
+			"type": "chrome",
+			"request": "launch",
+			"cwd": "${workspaceRoot}",
+			"file": "${workspaceRoot}/index.html",
+			"linux": { "runtimeExecutable": "/usr/bin/chromium-browser" },
+			"sourceMaps": false,
+			"timeout": 100000
+		}
+	]
 }

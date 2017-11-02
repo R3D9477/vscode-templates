@@ -2,18 +2,19 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "OSX/Linux: Build and Debug",
-			"args": [
-				"compilePath=${workspaceRoot}",
-				"compileCommand=haxe build_debug.hxml",
-				"runPath=${workspaceRoot}/din/debug",
-				"runCommand=Main-debug",
-				"runInTerminal=true"
-			],
+			"name": "Launch (Hxcpp)",
 			"type": "hxcpp",
 			"request": "launch",
-			"program": "",
-			"stopOnEntry": true
+			"preLaunchTask": "build debug",
+			"cwd": "${workspaceRoot}/export/cpp/debug",
+			"linux": { "program": "${workspaceRoot}/export/cpp/debug/Main-debug" },
+			"windows": { "program": "${workspaceRoot}/export/cpp/debug/Main-debug.exe" }
+		},
+		{
+			"name": "Attach (Hxcpp)",
+			"type": "hxcpp",
+			"request": "attach",
+			"processId": "${command:pickProcess}"
 		}
 	]
 }

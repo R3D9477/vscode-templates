@@ -1,3 +1,3 @@
 -main Main
 -cp src
--cpp bin/release
+-cpp export/cpp/release

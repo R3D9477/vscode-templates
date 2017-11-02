@@ -2,11 +2,12 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug (NodeJS)",
+			"name": "Launch (NodeJS)",
 			"type": "node",
 			"request": "launch",
-			"cwd": "${workspaceFolder}",
-			"program": "${workspaceFolder}/main_module.js"
+			"preLaunchTask": "build",
+			"cwd": "${workspaceRoot}/export/js/debug",
+			"program": "${workspaceRoot}/export/js/debug/main.js"
 		},
 		{
 			"name": "Attach (NodeJS)",
