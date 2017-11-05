@@ -2,13 +2,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug (disable sourcemaps)",
+			"name": "Debug (Chrome)",
 			"type": "chrome",
 			"request": "launch",
-			"cwd": "${workspaceRoot}",
 			"file": "${workspaceRoot}/index.html",
-			"linux": { "runtimeExecutable": "/usr/bin/chromium-browser" },
-			"sourceMaps": false,
+			"linux": {
+				"runtimeExecutable": "/usr/bin/chromium-browser",
+				"args": "--password-store=basic"
+			},
 			"timeout": 100000
 		}
 	]
