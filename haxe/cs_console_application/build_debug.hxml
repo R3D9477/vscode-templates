@@ -1,0 +1,5 @@
+-main Main
+-cp Source
+-cs Export/CSharp/Debug
+
+-debug

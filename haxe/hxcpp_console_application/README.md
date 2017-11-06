@@ -1,3 +1,3 @@
 # vscode-templates: Haxe
 
-## console application (hxcpp)
+## console application (C++)

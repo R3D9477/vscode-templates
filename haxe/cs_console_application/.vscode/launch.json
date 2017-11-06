@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch",
+			"type": "mono",
+			"request": "launch",
+			"preLaunchTask": "build debug",
+			"cwd": "${workspaceRoot}/Export/CSharp/Debug/bin",
+			"program": "${workspaceRoot}/Export/CSharp/Debug/bin/Main-Debug.exe"
+		},
+		{
+			"name": "Attach",
+			"type": "mono",
+			"request": "attach",
+			"address": "localhost",
+			"port": 55555
+		}
+	]
+}
