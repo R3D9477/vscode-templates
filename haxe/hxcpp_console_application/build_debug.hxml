@@ -1,11 +1,10 @@
 -main Main
--cp src
--cpp export/cpp/debug
+-cp Source
+-cpp Export/Hxcpp/Debug
 
 -lib hxcpp-debugger
 
 -debug
-
 -D HXCPP_DEBUGGER
--D HXCPP_STACK_TRACE
 -D HXCPP_TELEMETRY
+-D HXCPP_STACK_TRACE

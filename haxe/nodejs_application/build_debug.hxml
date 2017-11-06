@@ -1,0 +1,5 @@
+-main Main
+-cp Source
+-js Export/NodeJS/Debug/Main.js
+
+-debug

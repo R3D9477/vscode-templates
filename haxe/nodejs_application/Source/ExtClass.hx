@@ -4,5 +4,5 @@ class ExtClass {
 	var gx:Int;
 	public function new () gx = 0;
 	public function setX (x:Int) gx = x;
-	public function printX () Sys.println('x:$gx');
+	public function printX () trace('x:$gx');
 }
