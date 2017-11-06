@@ -1,16 +1,9 @@
-import haxe.ui.Toolkit;
-import haxe.ui.HaxeUIApp;
-import haxe.ui.macros.ComponentMacros;
+package;
 
 class Main {
-	public static function main() {
-		Toolkit.init();
-		
-		var app = new HaxeUIApp();
-		
-		app.ready(function() {
-			app.addComponent(ComponentMacros.buildComponent("Assets/Xml/UI.xml"));
-			app.start();
-		});
+	public static function main () {
+		var ex = new ExtClass();
+		ex.setX(123);
+		ex.printX();
 	}
 }
