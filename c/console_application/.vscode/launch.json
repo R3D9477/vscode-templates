@@ -9,7 +9,8 @@
 			"cwd": "${workspaceRoot}/bin/debug",
 			"linux": { "program": "${workspaceRoot}/bin/debug/main" },
 			"windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },
-			"MIMode": "gdb"
+			"MIMode": "gdb",
+			"externalConsole": true
 		},
 		{
 			"name": "Attach (gdb)",
