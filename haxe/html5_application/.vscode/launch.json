@@ -2,23 +2,18 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"sourceMaps": true,
-			"name": "Debug (Chrome)",
+			"name": "Debug (Chromium)",
 			"type": "chrome",
 			"request": "launch",
 			"preLaunchTask": "build debug",
 			"file": "${workspaceRoot}/Export/Html5/Debug/Main.html",
+			"runtimeExecutable": "chromium-browser",
 			"linux": {
 				"runtimeExecutable": "/usr/bin/chromium-browser",
-				"args": "--password-store=basic"
+				"runtimeArgs": [ "--password-store=basic" ]
 			},
-			"timeout": 100000
-		},
-		{
-			"name": "Attach (NodeJS)",
-			"type": "node",
-			"request": "attach",
-			"processId": "${command:pickProcess}"
+			"timeout": 100000,
+			"sourceMaps": true
 		}
 	]
 }

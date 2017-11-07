@@ -2,13 +2,14 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug (Chrome)",
+			"name": "Debug (Chromium)",
 			"type": "chrome",
 			"request": "launch",
 			"file": "${workspaceRoot}/index.html",
+			"runtimeExecutable": "chromium-browser",
 			"linux": {
 				"runtimeExecutable": "/usr/bin/chromium-browser",
-				"args": "--password-store=basic"
+				"runtimeArgs": [ "--password-store=basic" ]
 			},
 			"timeout": 100000
 		}
