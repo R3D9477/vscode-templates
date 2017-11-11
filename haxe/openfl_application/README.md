@@ -15,6 +15,6 @@ Tested with VSCode extensions
 Additional requirements
 * [Haxe](https://haxe.org)
 * [OpenFL](http://www.openfl.org)
-* [Chromium](https://chromium.woolyss.com) (for Html5 debugging)
+* [Google Chrome browser](https://www.google.ru/chrome/browser/desktop/) (for Html5 debugging)
 * [hxcpp-debugger](https://github.com/HaxeFoundation/hxcpp-debugger) (for C++ debugging)
 * Need to place symlink (or copy) of [extensionHomePath]/vscode-kha/Kha to your project's root directory

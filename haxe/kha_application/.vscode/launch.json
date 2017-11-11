@@ -2,16 +2,12 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Launch (Chromium)",
+			"name": "Launch (Chrome)",
 			"type": "chrome",
 			"request": "launch",
 			"preLaunchTask": "Build Html5 debug",
 			"file": "${workspaceRoot}/build/html5/index.html",
-			"runtimeExecutable": "chromium-browser",
-			"linux": {
-				"runtimeExecutable": "/usr/bin/chromium-browser",
-				"runtimeArgs": [ "--password-store=basic" ]
-			},
+			"linux": { "runtimeArgs": [ "--password-store=basic" ] },
 			"timeout": 100000,
 			"sourceMaps": true
 		},

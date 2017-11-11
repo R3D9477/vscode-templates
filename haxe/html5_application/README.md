@@ -1,6 +1,6 @@
 # vscode-templates: Haxe
 
-## HTML5 application
+## Html5 application
 
 Currently for
 * Html5 (debug, release)
@@ -11,4 +11,4 @@ Tested with VSCode extensions
 
 Additional requirements
 * [Haxe](https://haxe.org)
-* [Chromium](https://chromium.woolyss.com)
+* [Google Chrome browser](https://www.google.ru/chrome/browser/desktop/)
