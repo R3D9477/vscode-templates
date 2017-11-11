@@ -7,8 +7,8 @@ Currently for
 * C++ (debug, release)
 
 Tested with VSCode extensions
-* [vscode-kha](https://github.com/Kode/vscode-kha)
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)
+* [vscode-kha](https://github.com/Kode/vscode-kha)
 * [chrome-debug](https://github.com/Microsoft/vscode-chrome-debug) (for Html5 debugging)
 * [vscode-hxcpp-debug](https://github.com/jcward/vscode-hxcpp-debug) (for C++ debugging)
 
