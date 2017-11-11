@@ -11,7 +11,7 @@ RELOBJDIR ?= obj/release
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
 	APPEXT ?= .exe
-
+	
 	RM = del
 	MKDIR = mkdir -p
 
