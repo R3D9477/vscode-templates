@@ -10,5 +10,5 @@ Tested with VSCode extensions
 * [vscode-hxcpp-debug](https://github.com/jcward/vscode-hxcpp-debug)
 
 Additional requirements
-* [Haxe](https://haxe.org/)
+* [Haxe](https://haxe.org)
 * [hxcpp-debugger](https://github.com/HaxeFoundation/hxcpp-debugger)

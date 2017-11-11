@@ -10,5 +10,5 @@ Tested with VSCode extensions
 * [chrome-debug](https://github.com/Microsoft/vscode-chrome-debug)
 
 Additional requirements
-* [Haxe](https://haxe.org/)
+* [Haxe](https://haxe.org)
 * [Chromium](https://chromium.woolyss.com)

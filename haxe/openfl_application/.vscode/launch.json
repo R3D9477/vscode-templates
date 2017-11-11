@@ -6,7 +6,7 @@
 			"type": "chrome",
 			"request": "launch",
 			"preLaunchTask": "Build Html5 debug",
-			"file": "${workspaceRoot}/build/html5/index.html",
+			"file": "${workspaceRoot}/Export/html5/bin/index.html",
 			"runtimeExecutable": "chromium-browser",
 			"linux": {
 				"runtimeExecutable": "/usr/bin/chromium-browser",
@@ -21,11 +21,11 @@
 			"request": "launch",
 			"preLaunchTask": "Build C++ debug",
 			"linux": { 
-				"cwd": "${workspaceRoot}/build/linux",
-				"program": "${workspaceRoot}/build/linux/Main" },
+				"cwd": "${workspaceRoot}/Export/linux/bin",
+				"program": "${workspaceRoot}/Export/linux/bin/ApplicationMain-debug" },
 			"windows": {
-				"cwd": "${workspaceRoot}/build/windows",
-				"program": "${workspaceRoot}/build/windows/Main.exe"
+				"cwd": "${workspaceRoot}/Export/windows/bin",
+				"program": "${workspaceRoot}/Export/windows/bin/ApplicationMain-debug.exe"
 			}
 		},
 		{

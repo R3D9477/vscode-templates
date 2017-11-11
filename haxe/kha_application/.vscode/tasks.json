@@ -2,7 +2,12 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"taskName": "Build Html5",
+			"taskName": "Build Html5 debug",
+			"command": "node",
+			"args": [ "Kha/make", "--kha", "Kha", "--target", "html5", "--debug" ]
+		},
+		{
+			"taskName": "Build Html5 release",
 			"command": "node",
 			"args": [ "Kha/make", "--kha", "Kha", "--target", "html5" ]
 		},
