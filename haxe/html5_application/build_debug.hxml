@@ -1,8 +1,7 @@
--cp Source
--main Main.hx
-
--js Export/Html5/Debug/Main.js
-
--cmd cp Assets/Web/Main.html Export/Html5/Debug/Main.html
-
 -debug
+
+-main Main
+-cp Source
+-js Export/html5/debug/Main.js
+
+-cmd cp Assets/Web/Main.html Export/html5/debug/Main.html

@@ -1,6 +1,5 @@
+-main Main
 -cp Source
--main Main.hx
+-js Export/html5/release/Main.js
 
--js Export/Html5/Release/Main.js
-
--cmd cp Assets/Web/Main.html Export/Html5/Release/Main.html
+-cmd cp Assets/Web/Main.html Export/html5/release/Main.html

@@ -1,9 +1,9 @@
 # vscode-templates: Haxe
 
-## console application (C++)
+## Console application (C++)
 
 Currently for
-* Current OS (debug, release)
+* C++ (debug, release)
 
 Tested with VSCode extensions
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)

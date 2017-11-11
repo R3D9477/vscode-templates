@@ -5,10 +5,10 @@
 			"name": "Launch (Hxcpp)",
 			"type": "hxcpp",
 			"request": "launch",
-			"preLaunchTask": "build debug",
-			"cwd": "${workspaceRoot}/export/cpp/debug",
-			"linux": { "program": "${workspaceRoot}/export/cpp/debug/Main-debug" },
-			"windows": { "program": "${workspaceRoot}/export/cpp/debug/Main-debug.exe" }
+			"preLaunchTask": "Build C++ debug",
+			"cwd": "${workspaceRoot}/Export/cpp/debug",
+			"linux": { "program": "${workspaceRoot}/Export/cpp/debug/Main-debug" },
+			"windows": { "program": "${workspaceRoot}/Export/cpp/debug/Main-debug.exe" }
 		},
 		{
 			"name": "Attach (Hxcpp)",

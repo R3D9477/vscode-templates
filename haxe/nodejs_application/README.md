@@ -3,7 +3,7 @@
 ## NodeJS application
 
 Currently for
-* Current OS (debug, release)
+* NodeJS (debug, release)
 
 Tested with VSCode extensions
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)

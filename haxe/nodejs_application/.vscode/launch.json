@@ -6,9 +6,9 @@
 			"type": "node",
 			"request": "launch",
 			"sourceMaps": true,
-			"preLaunchTask": "build debug",
-			"program": "${workspaceRoot}/Export/NodeJS/Debug/Main.js",
-			"outFiles": [ "${workspaceRoot}/Export/NodeJS/Debug/*.js" ]
+			"preLaunchTask": "Build debug",
+			"program": "${workspaceRoot}/Export/nodejs/debug/Main.js",
+			"outFiles": [ "${workspaceRoot}/Export/nodejs/debug/*.js" ]
 		},
 		{
 			"name": "Attach (NodeJS)",

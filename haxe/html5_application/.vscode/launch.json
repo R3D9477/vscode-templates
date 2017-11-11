@@ -5,8 +5,8 @@
 			"name": "Debug (Chromium)",
 			"type": "chrome",
 			"request": "launch",
-			"preLaunchTask": "build debug",
-			"file": "${workspaceRoot}/Export/Html5/Debug/Main.html",
+			"preLaunchTask": "Build Html5 debug",
+			"file": "${workspaceRoot}/Export/html5/debug/Main.html",
 			"runtimeExecutable": "chromium-browser",
 			"linux": {
 				"runtimeExecutable": "/usr/bin/chromium-browser",

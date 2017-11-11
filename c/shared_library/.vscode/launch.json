@@ -5,7 +5,7 @@
 			"name": "Launch (gdb)",
 			"type": "cppdbg",
 			"request": "launch",
-			"preLaunchTask": "build debug",
+			"preLaunchTask": "Build debug",
 			"cwd": "${workspaceRoot}/bin/debug",
 			"linux": { "program": "${workspaceRoot}/bin/debug/main" },
 			"windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },

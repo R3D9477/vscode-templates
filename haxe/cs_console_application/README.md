@@ -3,7 +3,7 @@
 ## console application (C#)
 
 Currently for
-* Current OS (release)
+* .NET (release)
 
 Tested with VSCode extensions
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)

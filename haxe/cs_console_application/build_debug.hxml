@@ -1,5 +1,5 @@
+-debug
+
 -main Main
 -cp Source
--cs Export/CSharp/Debug
-
--debug
+-cs Export/cs/debug

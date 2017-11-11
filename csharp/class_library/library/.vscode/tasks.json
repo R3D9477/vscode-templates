@@ -2,14 +2,14 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"taskName": "build debug",
+			"taskName": "Build debug",
 			"command": "dotnet build --configuration Debug",
 			"type": "shell",
 			"group": "build",
 			"problemMatcher": "$msCompile"
 		},
 		{
-			"taskName": "build release",
+			"taskName": "Build release",
 			"command": "dotnet build --configuration Release",
 			"type": "shell",
 			"group": "build",

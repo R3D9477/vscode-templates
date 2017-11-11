@@ -3,7 +3,7 @@
 ## HTML5 application
 
 Currently for
-* Current OS (debug, release)
+* Html5 (debug, release)
 
 Tested with VSCode extensions
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)

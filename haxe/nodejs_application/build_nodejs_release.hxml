@@ -1,0 +1,3 @@
+-main Main
+-cp Source
+-js Export/nodejs/release/Main.js

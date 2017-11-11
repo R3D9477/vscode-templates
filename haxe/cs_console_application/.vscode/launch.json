@@ -5,9 +5,9 @@
 			"name": "Launch",
 			"type": "mono",
 			"request": "launch",
-			"preLaunchTask": "build debug",
-			"cwd": "${workspaceRoot}/Export/CSharp/Debug/bin",
-			"program": "${workspaceRoot}/Export/CSharp/Debug/bin/Main-Debug.exe"
+			"preLaunchTask": "Build C# debug",
+			"cwd": "${workspaceRoot}/Export/cs/debug/bin",
+			"program": "${workspaceRoot}/Export/cs/debug/bin/Main-Debug.exe"
 		},
 		{
 			"name": "Attach",

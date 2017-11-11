@@ -10,22 +10,22 @@
 		"RELOBJDIR=${workspaceRoot}/obj/release"
 	],
 	"tasks": [
-		{ "taskName": "rebuild debug", "args": [ "rebuild_debug" ] },
-		{ "taskName": "build debug", "args": [ "build_debug" ] },
-		{ "taskName": "build debug (x86)", "args": [ "TARGETARCH=x86", "build_debug" ] },
-		{ "taskName": "build debug (x86_64)", "args": [ "TARGETARCH=x86_64", "build_debug" ] },
-		{ "taskName": "rebuild release", "args": [ "rebuild_release" ] },
-		{ "taskName": "build release", "args": [ "build_release" ] },
-		{ "taskName": "build release (x86)", "args": [ "TARGETARCH=x86", "build_release" ] },
-		{ "taskName": "build release (x86_64)", "args": [ "TARGETARCH=x86_64", "build_release" ] },
-		{ "taskName": "clean", "args": [ "clean" ] }
+		{ "taskName": "Rebuild debug", "args": [ "rebuild_debug" ] },
+		{ "taskName": "Build debug", "args": [ "build_debug" ] },
+		{ "taskName": "Build debug (x86)", "args": [ "TARGETARCH=x86", "build_debug" ] },
+		{ "taskName": "Build debug (x86_64)", "args": [ "TARGETARCH=x86_64", "build_debug" ] },
+		{ "taskName": "Rebuild delease", "args": [ "rebuild_release" ] },
+		{ "taskName": "Build release", "args": [ "build_release" ] },
+		{ "taskName": "Build release (x86)", "args": [ "TARGETARCH=x86", "build_release" ] },
+		{ "taskName": "Build release (x86_64)", "args": [ "TARGETARCH=x86_64", "build_release" ] },
+		{ "taskName": "Clean", "args": [ "clean" ] }
 	],
 	"linux": {
 		"tasks": [
-			{ "taskName": "build release (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_release" ] },
-			{ "taskName": "build debug (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_debug" ] },
-			{ "taskName": "build release (cross-arm gnueabi)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
-			{ "taskName": "build release (cross-arm gnueabihf)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
+			{ "taskName": "Build release (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_release" ] },
+			{ "taskName": "Build debug (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_debug" ] },
+			{ "taskName": "Build release (cross-arm gnueabi)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
+			{ "taskName": "Build release (cross-arm gnueabihf)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
 		]
 	}
 }

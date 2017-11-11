@@ -1,0 +1,9 @@
+-debug
+-lib hxcpp-debugger
+-D HXCPP_DEBUGGER
+-D HXCPP_TELEMETRY
+-D HXCPP_STACK_TRACE
+
+-main Main
+-cp Source
+-cpp Export/cpp/debug
