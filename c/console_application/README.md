@@ -26,3 +26,5 @@ Additional requirements
     * mingw32-gcc-g++ (class "bin")
     * mingw32-gdb (class "bin")
     * mingw32-make (class "bin")
+
+*!!! Also don't forget to add path of MinGW binaries (C:\MinGW\bin) to evironment variable PATH on your Windows !!!*

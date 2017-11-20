@@ -91,8 +91,8 @@ RELCFLAGS = -O3 -DNDEBUG
 
 CC      ?= gcc
 
-CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall
+CLFLAGS += -I$(ESCINCDIR)
+CCFLAGS += -Wall
 
 LDFLAGS ?=
 LDLIBS  ?=
