@@ -2,7 +2,7 @@
 	"version": "0.1.0",
 	"suppressTaskName": true,
 	"command": "make",
-	"windows": { "command": "C:/MinGW/bin/make.exe" },
+	"windows": { "command": "C:/MinGW/bin/mingw32-make.exe" },
 	"args": [
 		"APPNAME=main",
 		"DBGBINDIR=${workspaceRoot}/bin/debug",

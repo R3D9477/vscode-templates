@@ -23,6 +23,6 @@ Additional requirements
   * [GNU make](https://www.gnu.org/software/make/)
 * Windows
   * [MinGW](http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite) with packages:
-    * mingw32-automake (class "bin")
     * mingw32-gcc-g++ (class "bin")
     * mingw32-gdb (class "bin")
+    * mingw32-make (class "bin")
