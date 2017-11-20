@@ -2,6 +2,7 @@
 	"version": "0.1.0",
 	"suppressTaskName": true,
 	"command": "make",
+	"windows": { "miDebuggerPath": "C:/MinGW/bin/make.exe" },
 	"args": [
 		"APPNAME=main",
 		"DBGBINDIR=${workspaceRoot}/bin/debug",
