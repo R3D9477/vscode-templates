@@ -7,16 +7,29 @@
 			"request": "launch",
 			"preLaunchTask": "Build debug",
 			"cwd": "${workspaceRoot}/bin/debug",
-			"linux": { "program": "${workspaceRoot}/bin/debug/main" },
-			"windows": { "program": "${workspaceRoot}/bin/debug/main.exe" },
-			"MIMode": "gdb"
+			"MIMode": "gdb",
+			"linux": {
+				"miDebuggerPath": "/usr/bin/gdb",
+				"program": "${workspaceRoot}/bin/debug/main"
+			},
+			"windows": {
+				"miDebuggerPath": "C:/MinGW/bin/gdb.exe",
+				"program": "${workspaceRoot}/bin/debug/main.exe"
+			},
+			"externalConsole": true
 		},
 		{
 			"name": "Attach (gdb)",
 			"type": "cppdbg",
 			"request": "attach",
 			"processId": "${command:pickProcess}",
-			"MIMode": "gdb"
+			"MIMode": "gdb",
+			"linux": {
+				"miDebuggerPath": "/usr/bin/gdb"
+			},
+			"windows": {
+				"miDebuggerPath": "C:/MinGW/bin/gdb.exe"
+			}
 		}
 	]
 }

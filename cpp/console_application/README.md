@@ -22,4 +22,4 @@ Additional requirements
   * [GNU C compiler](https://gcc.gnu.org/)
   * [GNU make](https://www.gnu.org/software/make/)
 * Windows
-  * [MinGW](http://www.mingw.org/)
+  * [MinGW](http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite)
