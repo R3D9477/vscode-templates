@@ -12,8 +12,10 @@ ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
 	APPEXT ?= .dll
 
-	RM = del
-	MKDIR = mkdir -p
+	FIXPATH = $(subst /,\,$1)
+	
+	MKDIR = if not exist $(call FIXPATH,$1) mkdir $(call FIXPATH,$1)
+	RM = del $(call FIXPATH,$1)
 
 	ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
 		TARGETARCH ?= x86_64
@@ -26,8 +28,10 @@ ifeq ($(OS),Windows_NT)
 		endif
 	endif
 else
-	RM = rm -f
-	MKDIR = mkdir -p
+	FIXPATH = $(subst \,/,$1)
+	
+	MKDIR = mkdir -p $(call FIXPATH,$1)
+	RM = rm -f $(call FIXPATH,$1)
 
 	UNAME_S := $(shell uname -s)
 	ifeq ($(UNAME_S),Linux)
@@ -47,16 +51,11 @@ else
 	endif
 endif
 
-CC ?= gcc
-
-CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall -Werror -fPIC
-
 ifeq ($(TARGETOS),windows)
-	CCFLAGS += -D WIN32
+	CCFLAGS ?= -D WIN32
 endif
 ifeq ($(TARGETOS),linux)
-	CCFLAGS += -D LINUX
+	CCFLAGS ?= -D LINUX
 endif
 
 ifeq ($(TARGETARCH),x86_64)
@@ -90,6 +89,11 @@ RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
 RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
+CC      ?= gcc
+
+CLFLAGS ?= -I$(ESCINCDIR)
+CCFLAGS ?= -Wall -Werror
+
 LDFLAGS ?= -shared
 LDLIBS  ?=
 
@@ -115,16 +119,16 @@ $(RELTARGET): $(RELOBJS)
 	$(CC) $(LDFLAGS) $(RELCFLAGS) $^ $(LDLIBS) -o "$@"
 
 prep:
-	$(MKDIR) $(DBGBINDIR)
-	$(MKDIR) $(DBGOBJDIR)
-	$(MKDIR) $(RELBINDIR)
-	$(MKDIR) $(RELOBJDIR)
+	$(call MKDIR,$(DBGBINDIR))
+	$(call MKDIR,$(DBGOBJDIR))
+	$(call MKDIR,$(RELBINDIR))
+	$(call MKDIR,$(RELOBJDIR))
 
 clean:
-	$(RM) $(DBGTARGET)
-	$(RM) $(DBGOBJS)
-	$(RM) $(RELTARGET)
-	$(RM) $(RELOBJS)
+	$(call RM,$(DBGTARGET))
+	$(call RM,$(DBGOBJS))
+	$(call RM,$(RELTARGET))
+	$(call RM,$(RELOBJS))
 
 rebuild_debug: clean build_debug
 rebuild_release: clean build_release

@@ -13,46 +13,45 @@ ifeq ($(OS),Windows_NT)
 	APPEXT ?= .exe
 	LIBEXT ?= .dll
 
-	RM = del
-	MKDIR = mkdir -p
-    
-    ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
-    	TARGETARCH ?= x86_64
-    else
-        ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
-        	TARGETARCH ?= x86_64
-        endif
-        ifeq ($(PROCESSOR_ARCHITECTURE),x86)
-        	TARGETARCH ?= x86
-        endif
-    endif
+	FIXPATH = $(subst /,\,$1)
+	
+	MKDIR = if not exist $(call FIXPATH,$1) mkdir $(call FIXPATH,$1)
+	RM = del $(call FIXPATH,$1)
+
+	ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
+		TARGETARCH ?= x86_64
+	else
+		ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
+			TARGETARCH ?= x86_64
+		endif
+		ifeq ($(PROCESSOR_ARCHITECTURE),x86)
+			TARGETARCH ?= x86
+		endif
+	endif
 else
-	RM = rm -f
-	MKDIR = mkdir -p
-    
-    UNAME_S := $(shell uname -s)
-    ifeq ($(UNAME_S),Linux)
-    	TARGETOS ?= linux
-    	APPEXT ?=
-    	LIBEXT ?= .so
-    endif
-    
-    UNAME_P := $(shell uname -p)
-    ifeq ($(UNAME_P),x86_64)
-    	TARGETARCH ?= x86_64
-    endif
-    ifneq ($(filter %86,$(UNAME_P)),)
-    	TARGETARCH ?= x86
-    endif
-    ifneq ($(filter arm%,$(UNAME_P)),)
-    	TARGETARCH ?= arm
-    endif
+	FIXPATH = $(subst \,/,$1)
+	
+	MKDIR = mkdir -p $(call FIXPATH,$1)
+	RM = rm -f $(call FIXPATH,$1)
+
+	UNAME_S := $(shell uname -s)
+	ifeq ($(UNAME_S),Linux)
+		TARGETOS ?= linux
+		APPEXT ?=
+		LIBEXT ?= .so
+	endif
+
+	UNAME_P := $(shell uname -p)
+	ifeq ($(UNAME_P),x86_64)
+		TARGETARCH ?= x86_64
+	endif
+	ifneq ($(filter %86,$(UNAME_P)),)
+		TARGETARCH ?= x86
+	endif
+	ifneq ($(filter arm%,$(UNAME_P)),)
+		TARGETARCH ?= arm
+	endif
 endif
-
-CC ?= gcc
-
-CLFLAGS ?= -I$(ESCINCDIR)
-CCFLAGS ?= -Wall -Werror -fPIC
 
 ifeq ($(TARGETOS),windows)
 	CCFLAGS += -D WIN32
@@ -93,6 +92,11 @@ RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
 RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
+CC      ?= gcc
+
+CLFLAGS ?= -I$(ESCINCDIR)
+CCFLAGS ?= -Wall -Werror
+
 LDFLAGS ?= -Wall
 LDLIBS  ?= -l$(ESCLIBNAME)
 
@@ -124,16 +128,16 @@ $(RELTARGET): $(RELOBJS)
 	$(CC) $(LDFLAGS) $(RELCFLAGS) $^ $(LDLIBS) -o "$@"
 
 prep:
-	$(MKDIR) $(DBGBINDIR)
-	$(MKDIR) $(DBGOBJDIR)
-	$(MKDIR) $(RELBINDIR)
-	$(MKDIR) $(RELOBJDIR)
+	$(call MKDIR,$(DBGBINDIR))
+	$(call MKDIR,$(DBGOBJDIR))
+	$(call MKDIR,$(RELBINDIR))
+	$(call MKDIR,$(RELOBJDIR))
 
 clean:
-	$(RM) $(DBGTARGET)
-	$(RM) $(DBGOBJS)
-	$(RM) $(RELTARGET)
-	$(RM) $(RELOBJS)
+	$(call RM,$(DBGTARGET))
+	$(call RM,$(DBGOBJS))
+	$(call RM,$(RELTARGET))
+	$(call RM,$(RELOBJS))
 
 rebuild_debug: clean build_debug
 rebuild_release: clean build_release

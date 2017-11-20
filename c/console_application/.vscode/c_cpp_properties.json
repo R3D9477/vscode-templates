@@ -29,10 +29,10 @@
 			"name": "Win32",
 			"intelliSenseMode": "clang-x64",
 			"includePath": [
-				"${workspaceRoot}",
 				"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 				"C:/MinGW/include",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+				"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+				"${workspaceRoot}/include"
 			],
 			"defines": [
 				"_DEBUG",
@@ -44,7 +44,8 @@
 				"path": [
 					"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 					"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-					"C:/MinGW/include/*"
+					"C:/MinGW/include/*",
+					"${workspaceRoot}/include"
 				],
 				"limitSymbolsToIncludedHeaders": true,
 				"databaseFilename": ""

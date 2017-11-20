@@ -34,7 +34,9 @@
 				"${workspaceRoot}",
 				"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 				"C:/MinGW/include",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+				"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+				"${workspaceRoot}/library/include",
+				"${workspaceRoot}/test/include"
 			],
 			"defines": [
 				"_DEBUG",
@@ -46,7 +48,9 @@
 				"path": [
 					"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
 					"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-					"C:/MinGW/include/*"
+					"C:/MinGW/include/*",
+					"${workspaceRoot}/library/include",
+					"${workspaceRoot}/test/include"
 				],
 				"limitSymbolsToIncludedHeaders": true,
 				"databaseFilename": ""
