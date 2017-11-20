@@ -24,7 +24,7 @@
 	},
 	"tasks": [
 		{ "taskName": "Rebuild debug", "args": [ "rebuild_debug" ] },
-		{ "taskName": "Build debug", "args": [ "build_debug" ] },
+		{ "taskName": "Build debug", "args": [ "build_debug" ], "isBuildCommand": true },
 		{ "taskName": "Build debug (x86)", "args": [ "TARGETARCH=x86", "build_debug" ] },
 		{ "taskName": "Build debug (x86_64)", "args": [ "TARGETARCH=x86_64", "build_debug" ] },
 		{ "taskName": "Rebuild release", "args": [ "rebuild_release" ] },
