@@ -3,10 +3,10 @@ APPNAME ?= main
 SRCDIR ?= src
 INCDIR ?= include
 
-DBGBINDIR ?= bin/debug
-DBGOBJDIR ?= obj/debug
-RELBINDIR ?= bin/release
-RELOBJDIR ?= obj/release
+DBGBINDIR ?= ../bin/debug
+DBGOBJDIR ?= ../obj/debug
+RELBINDIR ?= ../bin/release
+RELOBJDIR ?= ../obj/release
 
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
@@ -93,7 +93,7 @@ build_release: prep release
 
 debug: $(DBGTARGET)
 
-LDFLAGS += -Wl,-rpath=$(DBGBINDIR)
+LDFLAGS += -Wl,-rpath=.
 LDFLAGS += -L$(DBGBINDIR)
 
 $(DBGOBJDIR)/%.o: $(SRCDIR)/%.c
@@ -104,8 +104,8 @@ $(DBGTARGET): $(DBGOBJS)
 
 release: $(RELTARGET)
 
-#LDFLAGS += -Wl,-rpath=$(RELBINDIR)
-#LDFLAGS += -L$(RELBINDIR)
+LDFLAGS += -Wl,-rpath=.
+LDFLAGS += -L$(RELBINDIR)
 
 $(RELOBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"

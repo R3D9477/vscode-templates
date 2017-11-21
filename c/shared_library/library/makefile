@@ -3,10 +3,10 @@ APPNAME ?= main
 SRCDIR ?= src
 INCDIR ?= include
 
-DBGBINDIR ?= bin/debug
-DBGOBJDIR ?= obj/debug
-RELBINDIR ?= bin/release
-RELOBJDIR ?= obj/release
+DBGBINDIR ?= ../bin/debug
+DBGOBJDIR ?= ../obj/debug
+RELBINDIR ?= ../bin/release
+RELOBJDIR ?= ../obj/release
 
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows

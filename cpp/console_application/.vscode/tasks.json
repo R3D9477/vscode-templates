@@ -2,11 +2,7 @@
 	"version": "0.1.0",
 	"suppressTaskName": true,
 	"args": [
-		"APPNAME=main",
-		"DBGBINDIR=${workspaceRoot}/bin/debug",
-		"DBGOBJDIR=${workspaceRoot}/obj/debug",
-		"RELBINDIR=${workspaceRoot}/bin/release",
-		"RELOBJDIR=${workspaceRoot}/obj/release"
+		"APPNAME=main"
 	],
 	"windows": {
 		"command": "C:\\MinGW\\bin\\mingw32-make.exe",
@@ -16,10 +12,10 @@
 		"command": "/usr/bin/make",
 		"args": [ "CC=/usr/bin/g++" ],
 		"tasks": [
-			{ "taskName": "Build release (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_release" ] },
-			{ "taskName": "Build debug (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_debug" ] },
-			{ "taskName": "Build release (cross-arm gnueabi)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
-			{ "taskName": "Build release (cross-arm gnueabihf)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
+			{ "taskName": "Build release (arm)", "args": [ "TARGETARCH=arm", "build_release" ] },
+			{ "taskName": "Build debug (arm)", "args": [ "TARGETARCH=arm", "build_debug" ] },
+			{ "taskName": "Build release (cross-arm gnueabi)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
+			{ "taskName": "Build release (cross-arm gnueabihf)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
 		]
 	},
 	"tasks": [
