@@ -2,7 +2,11 @@
 	"version": "0.1.0",
 	"suppressTaskName": true,
 	"args": [
-		"APPNAME=main"
+		"APPNAME=main",
+		"DBGBINDIR=${workspaceRoot}/bin/debug",
+		"DBGOBJDIR=${workspaceRoot}/obj/debug",
+		"RELBINDIR=${workspaceRoot}/bin/release",
+		"RELOBJDIR=${workspaceRoot}/obj/release"
 	],
 	"windows": {
 		"command": "C:\\MinGW\\bin\\mingw32-make.exe",
