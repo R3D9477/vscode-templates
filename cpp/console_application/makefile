@@ -14,8 +14,8 @@ ifeq ($(OS),Windows_NT)
 	
 	FIXPATH = $(subst /,\,$1)
 	
-	MKDIR = if not exist $(call FIXPATH,$1) mkdir $(call FIXPATH,$1)
-	RM = del $(call FIXPATH,$1)
+	MKDIR = if not exist "$(call FIXPATH,$1)" mkdir "$(call FIXPATH,$1)"
+	RM = del "$(call FIXPATH,$1)"
 
 	ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
 		TARGETARCH ?= x86_64
@@ -30,8 +30,8 @@ ifeq ($(OS),Windows_NT)
 else
 	FIXPATH = $(subst \,/,$1)
 	
-	MKDIR = mkdir -p $(call FIXPATH,$1)
-	RM = rm -f $(call FIXPATH,$1)
+	MKDIR = mkdir -p "$(call FIXPATH,$1)"
+	RM = rm -f "$(call FIXPATH,$1)"
 
 	UNAME_S := $(shell uname -s)
 	ifeq ($(UNAME_S),Linux)
