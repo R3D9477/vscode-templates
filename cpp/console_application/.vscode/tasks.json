@@ -14,7 +14,7 @@
 	},
 	"linux": {
 		"command": "/usr/bin/make",
-		"args": [ "/usr/bin/g++" ],
+		"args": [ "CC=/usr/bin/g++" ],
 		"tasks": [
 			{ "taskName": "Build release (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_release" ] },
 			{ "taskName": "Build debug (arm)", "args": [ "TARGETOS=linux", "TARGETARCH=arm", "build_debug" ] },

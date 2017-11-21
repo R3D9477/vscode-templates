@@ -11,7 +11,6 @@ RELOBJDIR ?= obj/release
 ifeq ($(OS),Windows_NT)
 	TARGETOS ?= windows
 	APPEXT ?= .exe
-	LIBEXT ?= .dll
 
 	FIXPATH = $(subst /,\,$1)
 	
@@ -38,7 +37,6 @@ else
 	ifeq ($(UNAME_S),Linux)
 		TARGETOS ?= linux
 		APPEXT ?=
-		LIBEXT ?= .so
 	endif
 
 	UNAME_P := $(shell uname -p)
@@ -70,35 +68,23 @@ ifeq ($(TARGETARCH),arm)
 	CCFLAGS += -D ARM
 endif
 
-empty =
-space = $(empty) $(empty)
-escspace = $(empty)\ $(empty)
-ESCSRCDIR = $(subst $(space),$(escspace),$(SRCDIR))
-ESCINCDIR = $(subst $(space),$(escspace),$(INCDIR))
-ESCAPPNAME = $(subst $(space),$(escspace),$(APPNAME))$(subst $(space),$(escspace),$(APPEXT))
-ESCLIBNAME = $(subst $(space),$(escspace),$(APPNAME))
-ESCDBGBINDIR = $(subst $(space),$(escspace),$(DBGBINDIR))
-ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
-ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
-ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
+SRCS = $(wildcard $(SRCDIR)/*.c)
 
-SRCS = $(wildcard $(ESCSRCDIR)/*.c)
-
-DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
-DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGTARGET = $(DBGBINDIR)/$(APPNAME)$(APPEXT)
+DBGOBJS   = $(SRCS:$(SRCDIR)/%.c=$(DBGOBJDIR)/%.o)
 DBGCFLAGS = -g3 -DDEBUG
 
-RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
-RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELTARGET = $(RELBINDIR)/$(APPNAME)$(APPEXT)
+RELOBJS   = $(SRCS:$(SRCDIR)/%.c=$(RELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
 CC      ?= gcc
 
-CLFLAGS += -I$(ESCINCDIR)
+CLFLAGS += -I$(INCDIR)
 CCFLAGS += -Wall -Werror
 
 LDFLAGS ?= -Wall
-LDLIBS  ?= -l$(ESCLIBNAME)
+LDLIBS  ?= -l$(APPNAME)
 
 .PHONY: clean build_debug rebuild_debug build_release rebuild_release
 
@@ -110,7 +96,7 @@ debug: $(DBGTARGET)
 LDFLAGS += -Wl,-rpath=$(DBGBINDIR)
 LDFLAGS += -L$(DBGBINDIR)
 
-$(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(DBGOBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(DBGTARGET): $(DBGOBJS)
@@ -118,10 +104,10 @@ $(DBGTARGET): $(DBGOBJS)
 
 release: $(RELTARGET)
 
-LDFLAGS += -Wl,-rpath=$(RELBINDIR)
-LDFLAGS += -L$(RELBINDIR)
+#LDFLAGS += -Wl,-rpath=$(RELBINDIR)
+#LDFLAGS += -L$(RELBINDIR)
 
-$(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(RELOBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(RELTARGET): $(RELOBJS)

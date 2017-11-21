@@ -68,30 +68,19 @@ ifeq ($(TARGETARCH),arm)
 	CCFLAGS += -D ARM
 endif
 
-empty =
-space = $(empty) $(empty)
-escspace = $(empty)\ $(empty)
-ESCSRCDIR = $(subst $(space),$(escspace),$(SRCDIR))
-ESCINCDIR = $(subst $(space),$(escspace),$(INCDIR))
-ESCAPPNAME = lib$(subst $(space),$(escspace),$(APPNAME))$(subst $(space),$(escspace),$(APPEXT))
-ESCDBGBINDIR = $(subst $(space),$(escspace),$(DBGBINDIR))
-ESCDBGOBJDIR = $(subst $(space),$(escspace),$(DBGOBJDIR))
-ESCRELBINDIR = $(subst $(space),$(escspace),$(RELBINDIR))
-ESCRELOBJDIR = $(subst $(space),$(escspace),$(RELOBJDIR))
+SRCS = $(wildcard $(SRCDIR)/*.c)
 
-SRCS = $(wildcard $(ESCSRCDIR)/*.c)
-
-DBGTARGET = $(ESCDBGBINDIR)/$(ESCAPPNAME)
-DBGOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCDBGOBJDIR)/%.o)
+DBGTARGET = $(DBGBINDIR)/lib$(APPNAME)$(APPEXT)
+DBGOBJS   = $(SRCS:$(SRCDIR)/%.c=$(DBGOBJDIR)/%.o)
 DBGCFLAGS = -g3 -DDEBUG
 
-RELTARGET = $(ESCRELBINDIR)/$(ESCAPPNAME)
-RELOBJS   = $(SRCS:$(ESCSRCDIR)/%.c=$(ESCRELOBJDIR)/%.o)
+RELTARGET = $(RELBINDIR)/lib$(APPNAME)$(APPEXT)
+RELOBJS   = $(SRCS:$(SRCDIR)/%.c=$(RELOBJDIR)/%.o)
 RELCFLAGS = -O3 -DNDEBUG
 
 CC      ?= gcc
 
-CLFLAGS += -I$(ESCINCDIR)
+CLFLAGS += -I$(INCDIR)
 CCFLAGS += -Wall -Werror -fPIC
 
 LDFLAGS ?= -shared
@@ -104,7 +93,7 @@ build_release: prep release
 
 debug: $(DBGTARGET)
 
-$(ESCDBGOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(DBGOBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(DBGTARGET): $(DBGOBJS)
@@ -112,7 +101,7 @@ $(DBGTARGET): $(DBGOBJS)
 
 release: $(RELTARGET)
 
-$(ESCRELOBJDIR)/%.o: $(ESCSRCDIR)/%.c
+$(RELOBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
 
 $(RELTARGET): $(RELOBJS)

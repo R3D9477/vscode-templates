@@ -27,4 +27,6 @@ Additional requirements
     * mingw32-gdb (class "bin")
     * mingw32-make (class "bin")
 
-*!!! Also don't forget to add path of MinGW binaries (C:\MinGW\bin) to evironment variable PATH on your Windows !!!*
+Additional notes
+* any path (of directories "src", "include", "bin", application name  and etc) can't contain a whitespaces
+* on Windows don't forget to add path of MinGW binaries (C:\MinGW\bin) to evironment variable PATH
