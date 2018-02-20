@@ -12,3 +12,4 @@ Tested with VSCode extensions
 Additional requirements
 * [Haxe](https://haxe.org)
 * [hxcpp-debugger](https://github.com/HaxeFoundation/hxcpp-debugger)
+* Linux: gnome-terminal

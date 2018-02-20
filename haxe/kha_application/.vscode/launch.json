@@ -16,19 +16,20 @@
 			"type": "hxcpp",
 			"request": "launch",
 			"preLaunchTask": "Build C++ debug",
-			"linux": { 
-				"cwd": "${workspaceRoot}/build/linux",
-				"program": "${workspaceRoot}/build/linux/Main" },
+			"linux": {
+				"args": [
+					"runPath=${workspaceRoot}/build/linux",
+					"runCommand=Main",
+					"runInTerminal=true"
+				]
+			},
 			"windows": {
-				"cwd": "${workspaceRoot}/build/windows",
-				"program": "${workspaceRoot}/build/windows/Main.exe"
+				"args": [
+					"runPath=${workspaceRoot}/build/windows",
+					"runCommand=Main.exe",
+					"runInTerminal=false"
+				]
 			}
-		},
-		{
-			"name": "Attach (Hxcpp)",
-			"type": "hxcpp",
-			"request": "attach",
-			"processId": "${command:pickProcess}"
 		}
 	]
 }

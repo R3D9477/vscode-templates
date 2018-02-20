@@ -6,15 +6,27 @@
 			"type": "hxcpp",
 			"request": "launch",
 			"preLaunchTask": "Build C++ debug",
-			"cwd": "${workspaceRoot}/Export/cpp/debug",
-			"linux": { "program": "${workspaceRoot}/Export/cpp/debug/Main-debug" },
-			"windows": { "program": "${workspaceRoot}/Export/cpp/debug/Main-debug.exe" }
-		},
-		{
-			"name": "Attach (Hxcpp)",
-			"type": "hxcpp",
-			"request": "attach",
-			"processId": "${command:pickProcess}"
+			"linux": {
+				"args": [
+					"runPath=${workspaceRoot}/Export/cpp/debug",
+					"runCommand=Main-debug",
+					"runInTerminal=true"
+				]
+			},
+			"osx": {
+				"args": [
+					"runPath=${workspaceRoot}/Export/cpp/debug",
+					"runCommand=Main-debug",
+					"runInTerminal=true"
+				]
+			},
+			"windows": {
+				"args": [
+					"runPath=${workspaceRoot}/Export/cpp/debug",
+					"runCommand=Main-debug.exe",
+					"runInTerminal=false"
+				]
+			}
 		}
 	]
 }
