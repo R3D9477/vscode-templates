@@ -1,6 +1,6 @@
 # vscode-templates: Nim
 
-## Empty application (C)
+## Empty C application with QML
 
 Currently for
 * C (debug, release)

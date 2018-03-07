@@ -1,6 +1,6 @@
 # vscode-templates: Nim
 
-## Empty application (C)
+## Empty C application
 
 Currently for
 * C (debug, release)
