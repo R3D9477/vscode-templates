@@ -13,6 +13,10 @@
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
+## [Nim](nim)
+* [Empty C application](nim/c_app/empty_c_app)
+* [Empty C application with QML](nim/c_app/empty_c_nimqml_app)
+
 ## [C#](csharp)
 * [Console application](csharp/console_application)
   * Linux: debug (.net core), release

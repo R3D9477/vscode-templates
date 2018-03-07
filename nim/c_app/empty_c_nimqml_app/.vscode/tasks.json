@@ -1,0 +1,19 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build C debug",
+			"type": "shell",
+			"command": "nim",
+			"args": [ "build_c_debug.nims" ]
+		},
+		{
+			"label": "Build C release",
+			"type": "shell",
+			"command": "nim",
+			"args": [ "build_c_release.nims" ]
+		}
+	]
+}
