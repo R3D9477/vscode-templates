@@ -7,15 +7,16 @@ author = "Username"
 description = "Build with release configuration"
 license = "MIT"
 
-let outDir = "bin/release"
+srcDir = "src"
+binDir = "bin/debug"
 
-mkdir(outDir)
+mkdir(binDir)
 
 let buildAppCmd = "nim" &
   " " & "cc" &
-  " " & "--nimcache:" & joinPath(@[outDir, "nimcache"]) &
-  " " & "--out:" & joinPath(@[outDir, "main"]) &
+  " " & "--nimcache:" & joinPath(@[binDir, "nimcache"]) &
+  " " & "--out:" & joinPath(@[binDir, "main"]) &
   " " & "-d:release" &
-  " " & "src/main.nim"
+  " " & joinPath(@[srcDir, "main.nim"])
 
 exec buildAppCmd

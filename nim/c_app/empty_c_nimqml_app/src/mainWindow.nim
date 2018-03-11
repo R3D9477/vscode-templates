@@ -5,4 +5,4 @@ QtObject:
 
 proc loadMainWindow*(app: QApplication, engine: QQmlApplicationEngine) =
   var mwh = newWindowHandler[MainWindowHandler](app, engine)
-  loadWindow(mwh, "MainWindow")
+  loadWindow(mwh, "mainWindow")

@@ -7,10 +7,11 @@ author = "Username"
 description = "Build with release configuration"
 license = "MIT"
 
+srcDir = "src"
+binDir = "bin/release"
 let qmlDir = "qmlui"
-let outDir = "bin/release"
 
-mkdir(outDir)
+mkdir(binDir)
 
 proc buildResources (dir: string) =
   for subdir in listDirs(dir):
@@ -18,15 +19,15 @@ proc buildResources (dir: string) =
   for subfile in listFiles(dir):
     var (dir, name, ext) = splitFile(subfile)
     if ext == ".qrc":
-      exec ("rcc --binary " & subfile & " -o " & joinPath(outDir, name & ".rcc"))
+      exec ("rcc --binary " & subfile & " -o " & joinPath(binDir, name & ".rcc"))
 
 buildResources(qmlDir)
 
 let buildAppCmd = "nim" &
   " " & "cc" &
-  " " & "--nimcache:" & joinPath(@[outDir, "nimcache"]) &
-  " " & "--out:" & joinPath(@[outDir, "main"]) &
+  " " & "--nimcache:" & joinPath(@[binDir, "nimcache"]) &
+  " " & "--out:" & joinPath(@[binDir, "main"]) &
   " " & "-d:release" &
-  " " & "src/main.nim"
+  " " & joinPath(@[srcDir, "main.nim"])
 
 exec buildAppCmd

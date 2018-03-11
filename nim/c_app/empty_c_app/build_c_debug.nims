@@ -7,18 +7,19 @@ author = "Username"
 description = "Build with debug configuration"
 license = "MIT"
 
-let outDir = "bin/debug"
+srcDir = "src"
+binDir = "bin/debug"
 
-mkdir(outDir)
+mkdir(binDir)
 
 let buildAppCmd = "nim" &
   " " & "cc" &
-  " " & "--nimcache:" & joinPath(@[outDir, "nimcache"]) &
-  " " & "--out:" & joinPath(@[outDir, "main"]) &
+  " " & "--nimcache:" & joinPath(@[binDir, "nimcache"]) &
+  " " & "--out:" & joinPath(@[binDir, "main"]) &
   " " & "-d:debug" &
   " " & "--debuginfo" &
   " " & "--lineDir:on" &
   " " & "--debugger:native" &
-  " " & "src/main.nim"
+  " " & joinPath(@[srcDir, "main.nim"])
 
 exec buildAppCmd
