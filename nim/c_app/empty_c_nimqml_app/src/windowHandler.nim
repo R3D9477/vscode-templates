@@ -2,8 +2,8 @@ import nimqml, strutils, unicode
 
 QtObject:
   type WindowHandler* = ref object of QObject
-    app: QApplication
-    engine: QQmlApplicationEngine
+    app*: QApplication
+    engine*: QQmlApplicationEngine
   
   proc delete*(self: WindowHandler) =
     self.QObject.delete
