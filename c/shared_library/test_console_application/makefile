@@ -97,7 +97,7 @@ LDFLAGS += -Wl,-rpath=.
 LDFLAGS += -L$(DBGBINDIR)
 
 $(DBGOBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c $< -o "$@"
+	$(CC) $(CLFLAGS) $(DBGCFLAGS) $(CCFLAGS) -c "$<" -o "$@"
 
 $(DBGTARGET): $(DBGOBJS)
 	$(CC) $(LDFLAGS) $(DBGCFLAGS) $^ $(LDLIBS) -o "$@"
@@ -108,18 +108,20 @@ LDFLAGS += -Wl,-rpath=.
 LDFLAGS += -L$(RELBINDIR)
 
 $(RELOBJDIR)/%.o: $(SRCDIR)/%.c
-	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c $< -o "$@"
+	$(CC) $(CLFLAGS) $(RELCFLAGS) $(CCFLAGS) -c "$<" -o "$@"
 
 $(RELTARGET): $(RELOBJS)
 	$(CC) $(LDFLAGS) $(RELCFLAGS) $^ $(LDLIBS) -o "$@"
 
 prep:
+
 	$(call MKDIR,$(DBGBINDIR))
 	$(call MKDIR,$(DBGOBJDIR))
 	$(call MKDIR,$(RELBINDIR))
 	$(call MKDIR,$(RELOBJDIR))
 
 clean:
+
 	$(call RM,$(DBGTARGET))
 	$(call RM,$(DBGOBJS))
 	$(call RM,$(RELTARGET))

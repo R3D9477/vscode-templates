@@ -1,7 +1,7 @@
 # vscode-templates
 
 ## [C](c)
-* [GTK+ application](c/gtk_application)
+* [GTK+ (Glade) application](c/gtk_application/glade_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 * [Console application](c/console_application)
