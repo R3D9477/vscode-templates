@@ -16,8 +16,10 @@ Currently for
 
 Tested with VSCode extensions
 * [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+* [native-debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug)
 
 Additional requirements
+* [GDB](https://www.gnu.org/software/gdb/)
 * Linux
   * [GNU C compiler](https://gcc.gnu.org/)
   * [GNU make](https://www.gnu.org/software/make/)

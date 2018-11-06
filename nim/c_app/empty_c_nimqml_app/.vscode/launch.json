@@ -10,7 +10,12 @@
 			"name": "Launch Program",
 			"cwd": "${workspaceFolder}/bin/debug",
 			"preLaunchTask": "Build C debug",
-			"target": "main"
+			"linux": {
+				"target": "main"
+			},
+			"windows": {
+				"target": "main.exe"
+			}
 		}
 	]
 }

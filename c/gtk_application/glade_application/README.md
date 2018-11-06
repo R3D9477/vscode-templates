@@ -1,6 +1,6 @@
 # vscode-templates: C
 
-## console application
+## GTK+ (Glade) application
 
 Currently for
 * Windows
@@ -20,6 +20,8 @@ Tested with VSCode extensions
 
 Additional requirements
 * [GDB](https://www.gnu.org/software/gdb/)
+* [xmllint](http://xmlsoft.org/xmllint.html)
+* [Gtk+ libraries](https://www.gtk.org/)
 * Linux
   * [GNU C compiler](https://gcc.gnu.org/)
   * [GNU make](https://www.gnu.org/software/make/)

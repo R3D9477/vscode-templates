@@ -1,59 +1,59 @@
 {
-	"configurations": [
-		{
-			"name": "Linux",
-			"includePath": [
-				"/usr/include/c++/5.4.0",
-				"/usr/include/x86_64-linux-gnu/c++/5.4.0",
-				"/usr/local/include",
-				"/usr/include",
-				"/usr/include/x86_64-linux-gnu",
-				"${workspaceRoot}/include"
-			],
-			"defines": [],
-			"intelliSenseMode": "clang-x64",
-			"browse": {
-				"path": [
-					"/usr/include/c++/5.4.0",
-					"/usr/include/x86_64-linux-gnu/c++/5.4.0",
-					"/usr/local/include",
-					"/usr/include",
-					"/usr/include/x86_64-linux-gnu",
-					"${workspaceRoot}/include"
-				],
-				"limitSymbolsToIncludedHeaders": true,
-				"databaseFilename": ""
-			}
-		},
-		{
-			"name": "Win32",
-			"intelliSenseMode": "clang-x64",
-			"includePath": [
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
-				"C:/MinGW/include",
-				"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-				"${workspaceRoot}/include"
-			],
-			"defines": [
-				"_DEBUG",
-				"UNICODE",
-				"__GNUC__=6",
-				"__cdecl=__attribute__((__cdecl__))"
-			],
-			"browse": {
-				"path": [
-					"C:/MinGW/lib/gcc/mingw32/6.3.0/include",
-					"C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
-					"C:/MinGW/include/*",
-					"${workspaceRoot}/include"
-				],
-				"limitSymbolsToIncludedHeaders": true,
-				"databaseFilename": ""
-			}
-		}
-	],
-	"version": 3
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include/c++/5.4.0",
+                "/usr/include/x86_64-linux-gnu/c++/5.4.0",
+                "/usr/local/include",
+                "/usr/include",
+                "/usr/include/x86_64-linux-gnu",
+                "${workspaceRoot}/include"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include/c++/5.4.0",
+                    "/usr/include/x86_64-linux-gnu/c++/5.4.0",
+                    "/usr/local/include",
+                    "/usr/include",
+                    "/usr/include/x86_64-linux-gnu",
+                    "${workspaceRoot}/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/mingw32",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/backward",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                "C:/MinGW/include",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                "${workspaceRoot}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=6",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                    "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                    "C:/MinGW/include/*",
+                    "${workspaceRoot}/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
 }

@@ -1,0 +1,102 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include/c++/5.4.0",
+                "/usr/include/x86_64-linux-gnu/c++/5.4.0",
+                "/usr/local/include",
+                "/usr/include",
+                "/usr/include/x86_64-linux-gnu",
+                "${workspaceRoot}/include",
+                "/usr/include/gtk-3.0",
+                "/usr/include/at-spi2-atk/2.0",
+                "/usr/include/at-spi-2.0",
+                "/usr/include/dbus-1.0",
+                "/usr/lib/x86_64-linux-gnu/dbus-1.0/include",
+                "/usr/include/gtk-3.0",
+                "/usr/include/gio-unix-2.0/",
+                "/usr/include/mirclient",
+                "/usr/include/mircore",
+                "/usr/include/mircookie",
+                "/usr/include/cairo",
+                "/usr/include/pango-1.0",
+                "/usr/include/harfbuzz",
+                "/usr/include/pango-1.0",
+                "/usr/include/atk-1.0",
+                "/usr/include/cairo",
+                "/usr/include/pixman-1",
+                "/usr/include/freetype2",
+                "/usr/include/libpng12",
+                "/usr/include/gdk-pixbuf-2.0",
+                "/usr/include/libpng12",
+                "/usr/include/glib-2.0",
+                "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include/c++/5.4.0",
+                    "/usr/include/x86_64-linux-gnu/c++/5.4.0",
+                    "/usr/local/include",
+                    "/usr/include",
+                    "/usr/include/x86_64-linux-gnu",
+                    "${workspaceRoot}/include",
+                    "/usr/include/gtk-3.0",
+                    "/usr/include/at-spi2-atk/2.0",
+                    "/usr/include/at-spi-2.0",
+                    "/usr/include/dbus-1.0",
+                    "/usr/lib/x86_64-linux-gnu/dbus-1.0/include",
+                    "/usr/include/gtk-3.0",
+                    "/usr/include/gio-unix-2.0/",
+                    "/usr/include/mirclient",
+                    "/usr/include/mircore",
+                    "/usr/include/mircookie",
+                    "/usr/include/cairo",
+                    "/usr/include/pango-1.0",
+                    "/usr/include/harfbuzz",
+                    "/usr/include/pango-1.0",
+                    "/usr/include/atk-1.0",
+                    "/usr/include/cairo",
+                    "/usr/include/pixman-1",
+                    "/usr/include/freetype2",
+                    "/usr/include/libpng12",
+                    "/usr/include/gdk-pixbuf-2.0",
+                    "/usr/include/libpng12",
+                    "/usr/include/glib-2.0",
+                    "/usr/lib/x86_64-linux-gnu/glib-2.0/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "clang-x64",
+            "includePath": [
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                "C:/MinGW/include",
+                "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                "${workspaceRoot}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=6",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "browse": {
+                "path": [
+                    "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                    "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed",
+                    "C:/MinGW/include/*",
+                    "${workspaceRoot}/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}

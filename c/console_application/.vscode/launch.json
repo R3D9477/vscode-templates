@@ -1,34 +1,20 @@
 {
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Launch (gdb)",
-			"type": "cppdbg",
+			"type": "gdb",
 			"request": "launch",
+			"name": "Launch Program",
+			"cwd": "${workspaceFolder}/bin/debug",
 			"preLaunchTask": "Build debug",
-			"cwd": "${workspaceRoot}/bin/debug",
-			"MIMode": "gdb",
 			"linux": {
-				"miDebuggerPath": "/usr/bin/gdb",
-				"program": "${workspaceRoot}/bin/debug/main"
+				"target": "main"
 			},
 			"windows": {
-				"miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-				"program": "${workspaceRoot}/bin/debug/main.exe"
-			},
-			"externalConsole": true
-		},
-		{
-			"name": "Attach (gdb)",
-			"type": "cppdbg",
-			"request": "attach",
-			"processId": "${command:pickProcess}",
-			"MIMode": "gdb",
-			"linux": {
-				"miDebuggerPath": "/usr/bin/gdb"
-			},
-			"windows": {
-				"miDebuggerPath": "C:/MinGW/bin/gdb.exe"
+				"target": "main.exe"
 			}
 		}
 	]
