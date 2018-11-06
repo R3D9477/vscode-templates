@@ -1,8 +1,8 @@
 # vscode-templates: C++
 
-## console application
+console application
 
-Currently for
+## Currently for
 * Windows
   * auto detect (debug, release)
   * x86_64 (debug, release)
@@ -14,11 +14,11 @@ Currently for
   * arm (debug, release)
   * arm cross-compiled (release)
 
-Tested with VSCode extensions
+## Tested with VSCode extensions
 * [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 * [native-debug](https://marketplace.visualstudio.com/items?itemName=webfreak.debug)
 
-Additional requirements
+## Additional requirements
 * [GDB](https://www.gnu.org/software/gdb/)
 * Linux
   * [GNU C compiler](https://gcc.gnu.org/)
@@ -29,6 +29,6 @@ Additional requirements
     * mingw32-gdb (class "bin")
     * mingw32-make (class "bin")
 
-Additional notes
+## Additional notes
 * any path (of directories "src", "include", "bin", application name  and etc) can't contain a whitespaces
 * on Windows don't forget to add path of MinGW binaries (C:\MinGW\bin) to evironment variable PATH

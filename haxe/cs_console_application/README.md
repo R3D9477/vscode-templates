@@ -1,13 +1,13 @@
 # vscode-templates: Haxe
 
-## console application (C#)
+console application (C#)
 
-Currently for
+## Currently for
 * .NET (release)
 
-Tested with VSCode extensions
+## Tested with VSCode extensions
 * [vshaxe](https://marketplace.visualstudio.com/items?itemName=nadako.vshaxe)
 
-Additional requirements
+## Additional requirements
 * [Haxe](https://haxe.org)
 * [hxcs](https://github.com/HaxeFoundation/hxcs) (and it's requirements for target OS)

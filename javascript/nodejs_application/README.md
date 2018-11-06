@@ -1,9 +1,9 @@
 # vscode-templates: JavaScript
 
-## nodejs application with one submodule
+NodeJS application with one submodule
 
-Currently for
+## Currently for
 * Current OS
 
-Additional requirements
+## Additional requirements
 * [NodeJS](https://nodejs.org/)
