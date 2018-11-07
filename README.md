@@ -4,6 +4,9 @@
 * [GTK+ (Glade) application](c/gtk_application/glade_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
+* [GTK+ (Glade) overlay application (render a video)](c/gtk_application/glade_overlay_application)
+  * Linux: debug (gdb), release
+  * Windows: debug (gdb), release
 * [Console application](c/console_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release

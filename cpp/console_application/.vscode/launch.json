@@ -9,7 +9,7 @@
 			"request": "launch",
 			"name": "Launch Program",
 			"cwd": "${workspaceFolder}/bin/debug",
-			"preLaunchTask": "Build debug",
+			"preLaunchTask": "Rebuild debug",
 			"linux": {
 				"target": "main"
 			},

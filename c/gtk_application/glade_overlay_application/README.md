@@ -1,6 +1,6 @@
 # vscode-templates: C
 
-GTK+ (Glade) application
+GTK+ (Glade) Overlay application (render a video)
 
 ## Currently for
 * Windows
@@ -25,6 +25,7 @@ GTK+ (Glade) application
   * [GNU make](https://www.gnu.org/software/make/)
   * [xmllint](ftp://xmlsoft.org/libxml2/)
   * [Gtk+](https://www.gtk.org/download/linux.php)
+  * [GStreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html)
 * Windows
   * [MinGW](http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite) with packages:
     * mingw32-gcc-g++ (class "bin")
@@ -32,6 +33,7 @@ GTK+ (Glade) application
     * mingw32-make (class "bin")
   * [xmllint](http://xmlsoft.org/sources/win32/)
   * [Gtk+](https://www.gtk.org/download/windows.php)
+  * [GStreamer](https://gstreamer.freedesktop.org/documentation/installing/on-windows.html)
 
 ## Additional notes
 * any path (of directories "src", "include", "bin", application name  and etc) can't contain a whitespaces
