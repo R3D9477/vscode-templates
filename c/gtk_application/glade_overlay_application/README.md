@@ -23,7 +23,7 @@ GTK+ (Glade) Overlay application (render a video)
   * [GDB](https://www.gnu.org/software/gdb/)
   * [GNU C compiler](https://gcc.gnu.org/)
   * [GNU make](https://www.gnu.org/software/make/)
-  * [xmllint](ftp://xmlsoft.org/libxml2/
+  * [xmllint](ftp://xmlsoft.org/libxml2/)
   * [Gtk+](https://www.gtk.org/download/linux.php)
   * [GStreamer](https://gstreamer.freedesktop.org/documentation/installing/on-linux.html)
 * Windows
