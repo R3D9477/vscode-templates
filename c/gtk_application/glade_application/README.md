@@ -23,7 +23,7 @@ GTK+ (Glade) application
   * [GDB](https://www.gnu.org/software/gdb/)
   * [GNU C compiler](https://gcc.gnu.org/)
   * [GNU make](https://www.gnu.org/software/make/)
-  * [xmllint](ftp://xmlsoft.org/libxml2/)
+  * [xmllint](http://xmlsoft.org/downloads.html)
   * [Gtk+](https://www.gtk.org/download/linux.php)
 * Windows
   * [MinGW](http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite) with packages:
