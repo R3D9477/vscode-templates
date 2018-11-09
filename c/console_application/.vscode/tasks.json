@@ -12,10 +12,8 @@
 		"command": "/usr/bin/make",
 		"args": [ "CC=/usr/bin/gcc" ],
 		"tasks": [
-			{ "taskName": "Build release (arm)", "args": [ "TARGETARCH=arm", "build_release" ] },
-			{ "taskName": "Build debug (arm)", "args": [ "TARGETARCH=arm", "build_debug" ] },
-			{ "taskName": "Build release (cross-arm gnueabi)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
-			{ "taskName": "Build release (cross-arm gnueabihf)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
+			{ "taskName": "Build release (armel)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabi-gcc", "build_release" ] },
+			{ "taskName": "Build release (armhf)", "args": [ "TARGETARCH=arm", "CC=arm-linux-gnueabihf-gcc", "build_release" ] }
 		]
 	},
 	"tasks": [
