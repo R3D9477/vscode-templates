@@ -20,11 +20,12 @@ GTK+ (Glade) application
 
 ## Additional requirements
 * Linux
-  * [GDB](https://www.gnu.org/software/gdb/)
   * [GNU C compiler](https://gcc.gnu.org/)
+  * [GDB](https://www.gnu.org/software/gdb/)
   * [GNU make](https://www.gnu.org/software/make/)
   * [xmllint](http://xmlsoft.org/downloads.html)
   * [Gtk+](https://www.gtk.org/download/linux.php)
+  * [Glade](https://glade.gnome.org/)
 * Windows
   * [MinGW](http://www.mingw.org/wiki/HOWTO_Install_the_MinGW_GCC_Compiler_Suite) with packages:
     * mingw32-gcc-g++ (class "bin")
@@ -32,6 +33,7 @@ GTK+ (Glade) application
     * mingw32-make (class "bin")
   * [xmllint](http://xmlsoft.org/sources/win32/)
   * [Gtk+](https://www.gtk.org/download/windows.php)
+  * [Glade](http://ftp.gnome.org/pub/GNOME/binaries/win32/glade/)
 
 ## Additional notes
 * any path (of directories "src", "include", "bin", application name  and etc) can't contain a whitespaces
