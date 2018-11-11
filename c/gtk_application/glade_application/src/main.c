@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     
     GError *error = NULL;
     gtk_builder_add_from_resource(builder, "/main_window.glade", &error);
-    g_error_free(error);
+    /*g_error_free(error);*/
     
     GtkWidget *window = GTK_WIDGET(gtk_builder_get_object(builder, "main_window"));
     gtk_builder_connect_signals(builder, NULL);
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-void on_window_main_destroy() // called when window is closed
+void on_window_main_destroy()
 {
     gtk_main_quit();
 }
