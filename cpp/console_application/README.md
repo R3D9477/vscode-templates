@@ -30,5 +30,6 @@ console application
     * mingw32-make (class "bin")
 
 ## Additional notes
+* C++ templaes are depends on [umake-c](https://github.com/r3d9u11/umake-c)
 * any path (of directories "src", "include", "bin", application name  and etc) can't contain a whitespaces
 * on Windows don't forget to add path of MinGW binaries (C:\MinGW\bin) to evironment variable PATH
