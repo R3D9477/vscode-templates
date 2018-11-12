@@ -3,11 +3,11 @@
 ##### Install on Linux (one-command installation):<br/>
 * run command in terminal:
 ```bash
-mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/r3d9u11/StablexUI-Designer/master/Install-Linux.sh | bash
+mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/r3d9u11/vscode-templates/master/install-blueprint-linux.sh | bash
 ```
 Instead of `~/.vscode/blueprint-templates` you can use your own directory with blueprint-templates.
 
-#### [C](c)
+### [C](c)
 * [GTK+ (Glade) application](c/gtk_application/glade_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
@@ -18,12 +18,12 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
-#### [C++](cpp)
+### [C++](cpp)
 * [Console application](cpp/console_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
-#### [C#](csharp)
+### [C#](csharp)
 * [Console application](csharp/console_application)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
@@ -31,11 +31,11 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
 
-#### [Nim](nim)
+### [Nim](nim)
 * [Empty C application](nim/c_app/empty_c_app)
 * [Empty C application with QML](nim/c_app/empty_c_nimqml_app)
 
-#### [Haxe](haxe)
+### [Haxe](haxe)
 * [C++ console application](haxe/cpp_console_application): debug (hxcpp), release
 * [C# console application](haxe/cs_console_application): release
 * [Html5 application](haxe/html5_application): debug (chrome), release
@@ -49,6 +49,6 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
 
-#### [JavaScript](javascript)
+### [JavaScript](javascript)
 * [Html5 application](javascript/html5_application): debug (chrome), release
 * [NodeJS application](javascript/nodejs_application): debug (nodejs), release
