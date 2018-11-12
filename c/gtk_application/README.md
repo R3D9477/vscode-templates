@@ -1,1 +1,0 @@
-# vscode-templates: C
