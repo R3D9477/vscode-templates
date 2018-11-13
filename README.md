@@ -8,47 +8,47 @@ mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && cu
 Instead of `~/.vscode/blueprint-templates` you can use your own directory with blueprint-templates.
 
 ### [C](C)
-* [GTK+ (Glade) application](C/gtk_glade_application)
+* [GTK+ (Glade) application](C/gtk_glade_application#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
-* [Console application](C/console_application)
+* [Console application](C/console_application#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
-* [Shared library with test](C/shared_library)
+* [Shared library with test](C/shared_library#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
 ### [C++](CPP)
-* [Console application](CPP/console_application)
+* [Console application](CPP/console_application#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
 ### [C#](CSharp)
-* [Console application](CSharp/console_application)
+* [Console application](CSharp/console_application#vscode-templates-c)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
-* [Class library with test](CSharp/class_library)
+* [Class library with test](CSharp/class_library#vscode-templates-c)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
 
 ### [Nim](Nim)
-* [Empty C application](Nim/empty_c_app)
-* [Empty C application with QML](Nim/empty_c_nimqml_app)
+* [Empty C application](Nim/empty_c_app#vscode-templates-nim)
+* [Empty C application with QML](Nim/empty_c_nimqml_app#vscode-templates-nim)
 
 ### [Haxe](Haxe)
-* [C++ console application](Haxe/cpp_console_application): debug (hxcpp), release
-* [C# console application](Haxe/cs_console_application): release
-* [Html5 application](Haxe/html5_application): debug (chrome), release
-* [NodeJS application](Haxe/nodejs_application): debug (nodejs), release
-* [Kha application](Haxe/kha_application)
+* [C++ console application](Haxe/cpp_console_application#vscode-templates-haxe): debug (hxcpp), release
+* [C# console application](Haxe/cs_console_application#vscode-templates-haxe): release
+* [Html5 application](Haxe/html5_application#vscode-templates-haxe): debug (chrome), release
+* [NodeJS application](Haxe/nodejs_application#vscode-templates-haxe): debug (nodejs), release
+* [Kha application](Haxe/kha_application#vscode-templates-haxe)
   * Html5: debug (chrome), release
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
-* [OpenFL application](Haxe/kha_application)
+* [OpenFL application](Haxe/kha_application#vscode-templates-haxe)
   * Html5: debug (chrome), release
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
 
 ### [JavaScript](JavaScript)
-* [Html5 application](JavaScript/html5_application): debug (chrome), release
-* [NodeJS application](JavaScript/nodejs_application): debug (nodejs), release
+* [Html5 application](JavaScript/html5_application#vscode-templates-javascript): debug (chrome), release
+* [NodeJS application](JavaScript/nodejs_application#vscode-templates-javascript): debug (nodejs), release
