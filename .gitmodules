@@ -1,0 +1,12 @@
+[submodule "C/console_application/umake-c"]
+	path = C/console_application/umake-c
+	url = https://github.com/r3d9u11/umake-c.git
+[submodule "C/gtk_glade_application/umake-c"]
+	path = C/gtk_glade_application/umake-c
+	url = https://github.com/r3d9u11/umake-c.git
+[submodule "C/shared_library/library/umake-c"]
+	path = C/shared_library/library/umake-c
+	url = https://github.com/r3d9u11/umake-c.git
+[submodule "C/shared_library/test_console_application/umake-c"]
+	path = C/shared_library/test_console_application/umake-c
+	url = https://github.com/r3d9u11/umake-c.git
