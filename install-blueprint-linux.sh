@@ -9,8 +9,7 @@ shopt -s extglob
 
 for LANG_DIR in $TARGET_DIR/*; do
     for TEMPLATE_DIR in $LANG_DIR/*; do
-        mv $TEMPLATE_DIR "$LANG_DIR - $(basename ${$TEMPLATE_DIR/_/ })"
-        
+        mv $TEMPLATE_DIR "$LANG_DIR - $(basename ${TEMPLATE_DIR//_/ })"
     done
 done
 
