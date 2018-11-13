@@ -3,6 +3,7 @@
 ### Usage with [blueprint](https://github.com/reesemclean/blueprint)
 
 ##### Install on Linux (one-command installation):<br/>
+* install a git tools
 * run command in terminal:
 ```bash
 mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/r3d9u11/vscode-templates/master/install-blueprint-linux.sh | bash
