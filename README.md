@@ -8,8 +8,7 @@
 ```bash
 mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && \
   curl -H 'Cache-Control: no-cache' \
-  https://raw.githubusercontent.com/r3d9u11/vscode-templates/master/install-blueprint-linux.sh \
-  | bash
+  https://raw.githubusercontent.com/r3d9u11/vscode-templates/master/install-blueprint-linux.sh | bash
 ```
 Instead of `~/.vscode/blueprint-templates` you can use your own directory with blueprint-templates.
 
