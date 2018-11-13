@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TARGET_DIR=vscode-templates-blueprint
-TEMPLATE_FMT=__pascalCase_name__
+TEMPLATE_FMT=__name__
 
 git clone --recurse-submodules --quiet git://github.com/r3d9u11/vscode-templates.git $TARGET_DIR 2> /dev/null
 
