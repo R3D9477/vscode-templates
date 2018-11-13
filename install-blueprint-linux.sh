@@ -16,7 +16,7 @@ for LANG_DIR in $TARGET_DIR/*; do
             TEMPLATE_PATH="$LANG_DIR - ${TEMPLATE_PATH//_/ }"
             mkdir -p "$TEMPLATE_PATH"
             mv "$TEMPLATE_DIR" "$TEMPLATE_PATH/$TEMPLATE_FMT"
-            SET+="\"$TEMPLATE_PATH\",\n"
+            SET+="\"$PWD/$TEMPLATE_PATH\",\n"
         fi
     done
     rm -rf "$LANG_DIR"
