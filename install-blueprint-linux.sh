@@ -7,14 +7,10 @@ git clone --recurse-submodules git://github.com/r3d9u11/vscode-templates.git $TA
 
 shopt -s extglob
 
-function convert_to_blueprint {
-    mkdir -p $1/$TEMPLATE_NAME
-    mv $1/!($TEMPLATE_NAME) $1/$TEMPLATE_NAME/
-}
-
 for LANG_DIR in $TARGET_DIR/*; do
     for TEMPLATE_DIR in $LANG_DIR/*; do
-        convert_to_blueprint $TEMPLATE_DIR
+        mv $TEMPLATE_DIR "$LANG_DIR - $(basename ${$TEMPLATE_DIR/_/ })"
+        
     done
 done
 
