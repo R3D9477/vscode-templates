@@ -1,7 +1,6 @@
 # vscode-templates
 
-### Usage with [blueprint-templates](https://github.com/reesemclean/blueprint)
-
+### Usage with [blueprint](https://github.com/reesemclean/blueprint)
 
 ##### Install on Linux (one-command installation):<br/>
 * run command in terminal:
@@ -10,7 +9,9 @@ mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && cu
 ```
 Instead of `~/.vscode/blueprint-templates` you can use your own directory with blueprint-templates.
 
-### [C](C)
+## Contains:
+
+#### [C](C)
 * [GTK+ (Glade) application](C/gtk_glade_application#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
@@ -20,25 +21,21 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
 * [Shared library with test](C/shared_library#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
-
-### [C++](CPP)
+#### [C++](CPP)
 * [Console application](CPP/console_application#vscode-templates-c)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
-
-### [C#](CSharp)
+#### [C#](CSharp)
 * [Console application](CSharp/console_application#vscode-templates-c)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
 * [Class library with test](CSharp/class_library#vscode-templates-c)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
-
-### [Nim](Nim)
+#### [Nim](Nim)
 * [Empty C application](Nim/empty_c_app#vscode-templates-nim)
 * [Empty C application with QML](Nim/empty_c_nimqml_app#vscode-templates-nim)
-
-### [Haxe](Haxe)
+#### [Haxe](Haxe)
 * [C++ console application](Haxe/cpp_console_application#vscode-templates-haxe): debug (hxcpp), release
 * [C# console application](Haxe/cs_console_application#vscode-templates-haxe): release
 * [Html5 application](Haxe/html5_application#vscode-templates-haxe): debug (chrome), release
@@ -51,7 +48,6 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Html5: debug (chrome), release
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
-
-### [JavaScript](JavaScript)
+#### [JavaScript](JavaScript)
 * [Html5 application](JavaScript/html5_application#vscode-templates-javascript): debug (chrome), release
 * [NodeJS application](JavaScript/nodejs_application#vscode-templates-javascript): debug (nodejs), release
