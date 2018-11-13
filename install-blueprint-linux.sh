@@ -3,7 +3,10 @@
 TARGET_DIR=vscode-templates-blueprint
 TEMPLATE_FMT=__pascalCase_name__
 
-git clone --recurse-submodules git://github.com/r3d9u11/vscode-templates.git $TARGET_DIR
+echo "IN PROGRESS..."
+echo "Wait, please..."
+
+git clone --recurse-submodules --quiet git://github.com/r3d9u11/vscode-templates.git $TARGET_DIR
 
 shopt -s extglob
 
