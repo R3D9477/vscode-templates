@@ -7,7 +7,7 @@ mkdir -p ~/.vscode/blueprint-templates && cd ~/.vscode/blueprint-templates && cu
 ```
 Instead of `~/.vscode/blueprint-templates` you can use your own directory with blueprint-templates.
 
-### [C](c)
+### [C](C)
 * [GTK+ (Glade) application](C/gtk_glade_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
@@ -18,12 +18,12 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
-### [C++](cpp)
-* [Console application](Cpp/console_application)
+### [C++](CPP)
+* [Console application](CPP/console_application)
   * Linux: debug (gdb), release
   * Windows: debug (gdb), release
 
-### [C#](csharp)
+### [C#](CSharp)
 * [Console application](CSharp/console_application)
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
@@ -31,11 +31,11 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
 
-### [Nim](nim)
+### [Nim](Nim)
 * [Empty C application](Nim/empty_c_app)
 * [Empty C application with QML](Nim/empty_c_nimqml_app)
 
-### [Haxe](haxe)
+### [Haxe](Haxe)
 * [C++ console application](Haxe/cpp_console_application): debug (hxcpp), release
 * [C# console application](Haxe/cs_console_application): release
 * [Html5 application](Haxe/html5_application): debug (chrome), release
@@ -49,6 +49,6 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
 
-### [JavaScript](javascript)
+### [JavaScript](JavaScript)
 * [Html5 application](JavaScript/html5_application): debug (chrome), release
 * [NodeJS application](JavaScript/nodejs_application): debug (nodejs), release
