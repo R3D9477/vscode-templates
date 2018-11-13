@@ -5,8 +5,9 @@ TEMPLATE_FMT=__pascalCase_name__
 
 echo "IN PROGRESS..."
 echo "Wait, please."
+echo ""
 
-git clone --recurse-submodules --quiet git://github.com/r3d9u11/vscode-templates.git $TARGET_DIR
+git clone --recurse-submodules --quiet git://github.com/r3d9u11/vscode-templates.git $TARGET_DIR 2> /dev/null
 
 shopt -s extglob
 
