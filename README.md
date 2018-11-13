@@ -1,5 +1,8 @@
 # vscode-templates
 
+### Usage with [blueprint-templates](https://github.com/reesemclean/blueprint)
+
+
 ##### Install on Linux (one-command installation):<br/>
 * run command in terminal:
 ```bash
