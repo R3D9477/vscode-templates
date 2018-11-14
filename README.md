@@ -36,21 +36,21 @@ Instead of `~/.vscode/blueprint-templates` you can use your own directory with b
   * Linux: debug (.net core), release
   * Windows: debug (.net core), release
 ### [Nim](Nim)
-* [Empty C application](Nim/empty_c_app#vscode-templates-nim)
-* [Empty C application with QML](Nim/empty_c_nimqml_app#vscode-templates-nim)
+* [C: empty application](Nim/empty_c_app#vscode-templates-nim)
+* [C: QML application](Nim/empty_c_nimqml_app#vscode-templates-nim)
 ### [Haxe](Haxe)
-* [C++ console application](Haxe/cpp_console_application#vscode-templates-haxe): debug (hxcpp), release
-* [C# console application](Haxe/cs_console_application#vscode-templates-haxe): release
-* [Html5 application](Haxe/html5_application#vscode-templates-haxe): debug (chrome), release
-* [NodeJS application](Haxe/nodejs_application#vscode-templates-haxe): debug (nodejs), release
-* [Kha application](Haxe/kha_application#vscode-templates-haxe)
+* [C++: console application](Haxe/cpp_console_application#vscode-templates-haxe): debug (hxcpp), release
+* [C#: console application](Haxe/cs_console_application#vscode-templates-haxe): release
+* [Html5: empty application](Haxe/html5_application#vscode-templates-haxe): debug (chrome), release
+* [NodeJS: empty application](Haxe/nodejs_application#vscode-templates-haxe): debug (nodejs), release
+* [Kha: empty application](Haxe/kha_application#vscode-templates-haxe)
   * Html5: debug (chrome), release
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
-* [OpenFL application](Haxe/kha_application#vscode-templates-haxe)
+* [OpenFL: empty application](Haxe/kha_application#vscode-templates-haxe)
   * Html5: debug (chrome), release
   * Linux: debug (hxcpp), release
   * Windows: debug (hxcpp), release
 ### [JavaScript](JavaScript)
-* [Html5 application](JavaScript/html5_application#vscode-templates-javascript): debug (chrome), release
-* [NodeJS application](JavaScript/nodejs_application#vscode-templates-javascript): debug (nodejs), release
+* [Html5: empty application](JavaScript/html5_application#vscode-templates-javascript): debug (chrome), release
+* [NodeJS: empty application](JavaScript/nodejs_application#vscode-templates-javascript): debug (nodejs), release
